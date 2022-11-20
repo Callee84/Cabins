@@ -1,3 +1,80 @@
 body {
     background-color: whitesmoke;
 }
+
+/*-----------------------------------------| navbar |-----------------------------*/
+
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition-delay: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  position: relative;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #f1eeee;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .55s ease-in-out;
+}
+
+.middle {
+  margin-top: 0px;
+}
+
+/* when nav-icon is clicked */
+
+.navbar-toggler .top {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+/* collapsed navbar */
+
+.navbar-toggler.collapsed .top {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle {
+  opacity: 1;
+  filter: alpha(opacity=100)
+}
+
+.navbar-toggler.collapsed .bottom {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+
