@@ -26,5 +26,5 @@ urlpatterns = [
     path('', homePage, name='home'),
     path('cabins_reservations/', include('cabins_reservations.urls')),
     path('guestbook/', include('guestbook.urls')),
-    path('news/', include('news.urls'))
+    path('news/', include('news.urls')),
 ]
