@@ -3,6 +3,6 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('', views.news, name='news'),
+    path('', views.showNews.as_view(), name='news'),
     path('summernote/', include('django_summernote.urls')),
 ]

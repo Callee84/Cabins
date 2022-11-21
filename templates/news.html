@@ -4,5 +4,27 @@
         <!-- content for cabin_salen.html -->
 
         <h1>What's up doodlilido?</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-3 left">
+                {% for post in post_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-img">
+                                    <p class="author">Posted By: {{ post.author }}</p>
+                                </div>
+                                <h2 class="post-small-title">{{ post.title }}</h2>
+                                <p class="post-small-text">{{ post.excerpt }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
     
     {% endblock main %}
