@@ -77,4 +77,22 @@ body {
   transform: rotate(0deg);
 }
 
+/* cabin_salen */
+.video {
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.snow {
+  position: absolute;
+}
+
+/*------------------------------ | footer | ----------------------------*/
+
+div#map {
+  min-height: 360px;
+}
