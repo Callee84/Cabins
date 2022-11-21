@@ -19,7 +19,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-secondary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Home</a>
+          <a class="navbar-brand" href="{% url 'home' %}">Home</a>
           <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="toggler-icon top"></span>
             <span class="toggler-icon middle"></span>
@@ -32,8 +32,8 @@
                   Our cabins
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sälen</a></li>
-                  <li><a class="dropdown-item" href="#">Öland</a></li>
+                  <li><a class="dropdown-item" href="{% url 'cabin_salen' %}">Sälen</a></li>
+                  <li><a class="dropdown-item" href="{% url 'cabin_oland' %}">Öland</a></li>
                 </ul>
               </li>
               <li class="nav-item">
