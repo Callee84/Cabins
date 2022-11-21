@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('cabin_web.urls'), name='cabin_web'),
     path('', homePage, name='home'),
+    path('cabins_reservations', include('cabins_reservations.urls'))
 ]
