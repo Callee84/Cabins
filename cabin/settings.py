@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cabin_web',
-    'cabins_reservations'
+    'cabins_reservations',
+    'guestbook',
 ]
 
 MIDDLEWARE = [
