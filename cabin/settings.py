@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'cabins_reservations',
     'guestbook',
     'news',
+    'contact',
 ]
 
 MIDDLEWARE = [
