@@ -95,4 +95,5 @@ body {
 
 div#map {
   min-height: 360px;
+  width: 90%;
 }
