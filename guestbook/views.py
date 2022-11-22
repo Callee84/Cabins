@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from .models import PostGuest
 # Create your views here.
 
@@ -17,3 +17,4 @@ class AddGuestPost(CreateView):
     model = PostGuest
     template_name = 'add_guest_post.html'
     fields = '__all__'
+
