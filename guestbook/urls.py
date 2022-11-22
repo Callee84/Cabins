@@ -3,5 +3,5 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('', views.guestbook, name='guestbook')
+    path('', views.PostGuestView.as_view(), name='guestbook')
 ]

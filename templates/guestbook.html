@@ -4,5 +4,18 @@
         <!-- content for cabin_salen.html -->
 
         <h1>Tell me what you think...? Or not... </h1>
+            {% for post in object_list %}
+            <div>
+                <ul>
+                    <li>
+                        <h2>{{ post.title }} - {{ post.author }}</h2>
+                    </li>
+                    <li>
+                        <p>{{ post.content }}</p>
+                    </li>
+                </ul>    
+            </div>
+            {% endfor %}
+        
     
     {% endblock main %}
