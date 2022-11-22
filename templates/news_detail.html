@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+    
+    {% block main %}
+    <!-- content for news_details.html -->
+    <h1>{{ post.title }}</h1>
+    <p>Written By: {{ post.author }}</p>
+    <p>{{ post.content }}</p>
+
+    {% endblock main %}
+    

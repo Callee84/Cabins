@@ -12,10 +12,12 @@
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-img">
+                                    <a href="{% url 'news_details' post.slug %}">
                                     <p class="author">Posted By: {{ post.author }}</p>
                                 </div>
-                                <h2 class="post-small-title">{{ post.title }}</h2>
-                                <p class="post-small-text">{{ post.excerpt }}</p>
+                                    <h2 class="post-small-title">{{ post.title }}</h2>
+                                    <p class="post-small-text">{{ post.excerpt }}</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
