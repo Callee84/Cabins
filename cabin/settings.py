@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'guestbook',
     'news',
     'contact',
+    'profiles',
 ]
 
 MIDDLEWARE = [
