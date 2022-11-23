@@ -3,7 +3,7 @@
     {% block main %}
     <!-- content for news_details.html -->
     <h1>{{ post.title }}</h1>
-    <p>Posted By: {{ post.author.first_name }} {{ post.author.last_name }}</p>
+    <p>Posted By: {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created }}</p>
     <p>{{ post.content }}</p>
     <br>
     <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-success">Edit</button></a>

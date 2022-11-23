@@ -10,9 +10,9 @@ class Post(models.Model):
     slug = models.SlugField(max_length=225, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='news_posts')
     content = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateField(auto_now_add=True)
     excerpt = models.TextField(blank=True)
-    updated = models.DateTimeField(auto_now=True)
+    updated = models.DateField(auto_now=True)
 
     class Meta:
         ordering = ['created']
