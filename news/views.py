@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic.edit import DeleteView
 from .models import Post
 from .forms import PostForm
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -10,10 +12,12 @@ class showNews(ListView):
     model = Post
     queryset = Post.objects.order_by('created')
     template_name = 'news.html'
-    paginate_by = 5
+    paginate_by = 9
+    ordering = ['-created']
 
 
-class DetailNews (DetailView):
+
+class DetailNews(DetailView):
     model = Post
     template_name = 'news_detail.html'
 
@@ -30,3 +34,8 @@ class EditPost(UpdateView):
     template_name = 'edit_post.html'
     fields = '__all__'
 
+
+class DeletePost(DeleteView):
+    model = Post
+    template_name = 'deleted_post.html'
+    success_url = reverse_lazy('deleted_post')
