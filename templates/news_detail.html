@@ -6,7 +6,7 @@
     <p>Written By: {{ post.author }}</p>
     <p>{{ post.content }}</p>
     <br>
-    <a href="{% url 'edit_post' %}"><button class="secondary">Edit</button></a>
+    <a href="{% url 'edit_post' post.slug %}"><button class="secondary">Edit</button></a>
     <a href=""><button class="danger">Delete</button></a>
 
     {% endblock main %}
