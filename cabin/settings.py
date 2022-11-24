@@ -61,7 +61,7 @@ SITE_ID = 1
 
 
 # Email settings
-DEFAULT_FROM_EMAIL = "mail@example.com"
+DEFAULT_FROM_EMAIL = "carl.g.holm@gmail.com"
 EMAIL_HOST = "localhost"
 EMAIL_PORT = "1025"
 
