@@ -3,30 +3,31 @@
     {% block main %}
         <!-- content for cabin_salen.html -->
 
-        <div class="snow">
-        <div class="row">
-        <div class='video'>
-            <video src="/static/media/video/testvid.mp4" type="mp4" autoplay loop muted></video>
-        </div>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+        <div class="container-xxl">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner index-carousel">
+                <div class="carousel-item active">
+                  <img src="../static/media/img/bedrrom_salen.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../static/media/img/bedrrom_salen.jpg" class="d-block w-100" alt="...">
+                </div>
+                 <div class="carousel-item">
+                  <img src="../static/media/img/kitchen_salen.jpg" class="d-block w-100" alt="...">
+                </div>
+                <!-- <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="..."> 
+                </div> -->
               </div>
             </div>
           </div>
-        <div class="container"></div>
-            <h1>Welcome to Hattvägen 7 in Linvallen, Sälen.</h1>
-
-        </div>
-    </div>    
-  </div>
+          <div class="container index-body">
+              <div class="row justify-content-center">
+                  <div class="col-12 header-message">
+                      <h2>Welcome to StarCabins! When the Cabin is the Star.</h2> 
+                  </div>
+              </div>
+          
     
     {% endblock main %}
     
