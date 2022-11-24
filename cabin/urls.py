@@ -31,6 +31,5 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('profiles/', include('django.contrib.auth.urls')),
     path('account/', include('allauth.urls')),
-    path('')
     path('summernote/', include('django_summernote.urls')),
 ]
