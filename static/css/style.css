@@ -1,8 +1,12 @@
 body {
     background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*-----------------------------------------| navbar |-----------------------------*/
+/* .navbar{
+  position: fixed;
+} */
 
 .navbar-toggler {
   width: 20px;
@@ -77,6 +81,32 @@ body {
   transform: rotate(0deg);
 }
 
+/*------------------------------ | carousel index | ----------------------------*/
+
+#welcome {
+  position: relative;
+}
+
+.carousel-item {
+  max-height: 26rem;
+}
+
+/*------------------------------ | index body | ----------------------------*/
+
+.index-body {
+  margin-top: 3rem;
+}
+
+.header-message {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards-index {
+  margin-bottom: 3rem;
+}
+
+
 /* cabin_salen */
 .video {
   position: relative;
@@ -94,6 +124,8 @@ body {
 /*------------------------------ | footer | ----------------------------*/
 
 div#map {
+  margin-top: 3rem;
   min-height: 360px;
   width: 90%;
+  margin-inline: auto;
 }
