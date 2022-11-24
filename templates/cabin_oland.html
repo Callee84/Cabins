@@ -1,8 +1,52 @@
 {% extends 'base.html' %}
     
     {% block main %}
-    <h1>Welcome to Öland inna-da-sun!</h1>
-        <!-- content for cabin_oland.html -->
+        <!-- content for cabin_salen.html -->
+
+        <div class="container-xxl">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner index-carousel">
+                <div class="carousel-item active">
+                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316119/static/media/img/house_oland.b4e66a0ae7a9.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316122/static/media/img/kitchen_oland.88d746e988b3.jpg" class="d-block w-100" alt="...">
+                </div>
+                 <div class="carousel-item">
+                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316071/static/media/img/bedrrom_oland.jpg" class="d-block w-100" alt="...">
+                </div>
+                <!-- <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="..."> 
+                </div> -->
+            </div>
+          </div>
+        </div>
+          <div class="container index-body">
+              <div class="row justify-content-center">
+                  <div class="col-12 header-message">
+                      <h2>Welcome to the island of sun and wind - Öland!</h2> 
+                  </div>
+              </div>
+          
+              <div class="row">
+                <div class="col-l-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Kolstad</h5>
+                      <p class="card-text">Want some peace and quiet but with the possibility of some party and? Located only 10 minutes from Borgholm and the beautiful beaches of Köpingsvik.</p>
+                      <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <div class="container">
+          <div class="row">
+            <h2>Make a reservation</h2>
+          </div>
+        </div>
+
 
     {% endblock main %}
     
