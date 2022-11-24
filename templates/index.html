@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 
 {% block main %}
-<div class="container-lg">
+<div class="container-xxl">
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner index-carousel">
-        <h1 id="welcome">StarCabins</h1>
       <div class="carousel-item active">
         <img src="../static/media/img/house_oland.jpg" class="d-block w-100" alt="...">
       </div>
@@ -25,18 +24,28 @@
         <div class="col-12 header-message">
             <h2>Welcome to StarCabins! When the Cabin is the Star.</h2> 
         </div>
-        <div class="row justify-content-around cards-index">
-        <div class="col-4">
-            <h3>Sälen</h3>
-            <p>Located in Linvallen, one of the most popular skiingresots in Sweden. Only 3 minute drive from the 31 slopes that Linvallen has to offer.</p>
-        </div>
-        <div class="col-4">
-            <h3>Öland</h3>
-            <p>Want some peace and quiet but with the possibility of some party and? Located only 10 minutes from Borgholm and the beautiful beaches of Köpingsvik.</p>
-        </div>
+    </div>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Sälen</h5>
+          <p class="card-text">Located in Linvallen, one of the most popular skiresorts in Sweden. Only 3 minute drive from the 31 slopes that Linvallen has to offer.</p>
+          <a href="{% url 'cabin_salen' %}" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Öland</h5>
+          <p class="card-text">Want some peace and quiet but with the possibility of some party and? Located only 10 minutes from Borgholm and the beautiful beaches of Köpingsvik.</p>
+          <a href="{% url 'cabin_oland' %}" class="btn btn-primary">Visit Öland</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
 {% endblock %}
 

@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -89,7 +89,9 @@ body {
 
 .carousel-item {
   max-height: 26rem;
+  margin: auto;
 }
+
 
 /*------------------------------ | index body | ----------------------------*/
 
