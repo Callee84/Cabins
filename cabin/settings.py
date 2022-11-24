@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'guestbook',
     'news',
     'contact',
-    
 ]
 
 SITE_ID = 1
