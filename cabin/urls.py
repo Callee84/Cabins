@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from djreservation import urls as djreservation_urls
 
 from cabin_web.views import (
     homePage
@@ -30,5 +31,6 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('profiles/', include('django.contrib.auth.urls')),
     path('account/', include('allauth.urls')),
+    path('')
     path('summernote/', include('django_summernote.urls')),
 ]
