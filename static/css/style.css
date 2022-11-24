@@ -4,9 +4,9 @@ body {
 }
 
 /*-----------------------------------------| navbar |-----------------------------*/
-/* .navbar{
-  position: fixed;
-} */
+.navbar-nav {
+  color: rgb(100, 184, 194);
+}
 
 .navbar-toggler {
   width: 20px;
@@ -35,7 +35,7 @@ body {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #f1eeee;
+  background: #080808;
   border-radius: 1px;
   opacity: 1;
   left: 0;
