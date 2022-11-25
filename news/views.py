@@ -37,5 +37,5 @@ class EditPost(UpdateView):
 
 class DeletePost(DeleteView):
     model = Post
+    success_url = reverse_lazy('news')
     template_name = 'deleted_post.html'
-    success_url = reverse_lazy('deleted_post')

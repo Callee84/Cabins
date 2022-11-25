@@ -27,7 +27,9 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
-          <a href="{% url 'deleted_post' %}"></a><button type="submit" class="btn btn-danger" value="Confirm">Delete</button>
+          <form action="{% url 'deleted_post' post.slug %}" method="post">
+            {% csrf_token %}
+          <button class="btn btn-danger">Delete</button>
         </div>
       </div>
     </div>
