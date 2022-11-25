@@ -4,10 +4,23 @@
     {% block main %}
         <!-- content for cabin_salen.html -->
 
-        <h1>Wish to know more? Hala at me!</h1>
+        <h1>Contact us if you have any questions.</h1>
 
-        {{ form | crispy }}
+        
+        <div class="row d-flex justify-content-center">
 
+            <div class="col-sm-4 col-md-6">
+                <!-- Contact form -->
+                <form method="POST" class="contact-form full-form mb-5">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                        <br>
+                    <button type="submit" class="btn btn-secondary">Send
+                        message</button>
+    
+                </form>
+            </div>
+        </div>
     
       
 
