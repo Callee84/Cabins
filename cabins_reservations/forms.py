@@ -1,6 +1,8 @@
 from django import forms
 from .models import Guest, Booking
-from phonenumber_field import PhoneNumberField
+from phonenumber_field.modelfields import PhoneNumberField
+from django.conf import settings
+from datetime import datetime
 
 
 class GuestInfo(forms.ModelForm):
@@ -9,3 +11,14 @@ class GuestInfo(forms.ModelForm):
         model = Guest
         fields = ('first_name', 'last_name', 'email', 'phone_nr')
 
+
+class BookingInfo(forms.ModelForm):
+    arrival = forms.DateField(widget=forms.DateInput(
+            attrs={'type': 'date', 'min': datetime.now().date()}))
+    departure = forms.DateField(widget=forms.DateInput(
+            attrs={'type': 'date', 'min': datetime.now().date()}))
+    
+
+    class Meta:
+        model = Booking
+        fields = ('guests', 'arrival', 'departure')

@@ -3,7 +3,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 cabin_choice = (
-        ('SAL', 'Cabin Sälen'),
+        ('SAL', 'Sälen'),
         ('OLA', 'Öland'),
 )
 
@@ -30,7 +30,7 @@ class Booking(models.Model):
     booking_nr = models.AutoField(primary_key=True)
     guest = models.ForeignKey(
             Guest, on_delete=models.CASCADE, related_name='guest')
-    cabin = models.CharField(max_length= 6, choices=cabin_choice, null=False)
+    cabin = models.CharField(max_length=6, choices=cabin_choice, null=False)
     nr_of_guests = ((1, '1 Guest'), (2, '2 Guests'), (3, '3 Guests'),
                     (4, '4 Guests'), (5, '5 Guests'), (6, '6 Guests'),
                     (7, '2 Guests'), (8, '2 Guests'), (9, '9 Guests'),
