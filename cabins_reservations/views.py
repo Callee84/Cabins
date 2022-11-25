@@ -23,8 +23,16 @@ class cabinOland(View):
     # return render(request, 'cabin_oland.html')
 
 
-def cabinSalen(request):
-    return render(request, 'cabin_salen.html')
+class cabinSalen(View):
+      def get(self, request, *args, **kwargs):
+
+        guest_info = GuestInfo()
+        booking_info = BookingInfo()
+
+        return render(request, 'cabin_salen.html', {
+            'guest_info': guest_info,
+            'booking_info': booking_info
+        })
 
 
 def avalibility(request, User):
