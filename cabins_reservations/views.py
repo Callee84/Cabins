@@ -1,5 +1,6 @@
 from django.shortcuts import render, reverse, get_object_or_404
 from django.contrib.auth.models import User
+from django.views import View
 import datetime
 from .models import Guest, Booking
 from .forms import GuestInfo, BookingInfo
@@ -8,12 +9,30 @@ from .forms import GuestInfo, BookingInfo
 # Create your views here.
 
 
-def cabinOland(request):
-    return render(request, 'cabin_oland.html')
+class cabinOland(View):
+    def get(self, request, *args, **kwargs):
+
+        guest_info = GuestInfo()
+        booking_info = BookingInfo()
+
+        return render(request, 'cabin_oland.html', {
+            'guest_info': guest_info,
+            'booking_info': booking_info
+        })
+
+    # return render(request, 'cabin_oland.html')
 
 
 def cabinSalen(request):
     return render(request, 'cabin_salen.html')
 
+
 def avalibility(request, User):
-    pass
+
+    avalible_date = len(Booking.objects.filter(
+        arrival_date=arrival,
+    ))
+
+
+# def BookingEnquiry(View):
+    

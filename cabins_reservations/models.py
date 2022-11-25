@@ -27,7 +27,7 @@ class Guest(models.Model):
 
 class Booking(models.Model):
 
-    booking_nr = models.AutoField(primary_key=True)
+    booking_id = models.AutoField(primary_key=True)
     guest = models.ForeignKey(
             Guest, on_delete=models.CASCADE, related_name='guest')
     cabin = models.CharField(max_length=6, choices=cabin_choice, null=False)
@@ -36,8 +36,9 @@ class Booking(models.Model):
                     (7, '2 Guests'), (8, '2 Guests'), (9, '9 Guests'),
                     (10, '2 Guests'), (11, '2 Guests'), (12, '12 Guests'))
     guests = models.IntegerField(choices=nr_of_guests, default=2)
-    arrival = models.DateField()
-    departure = models.DateField()
+    arrival_date = models.DateField()
+    departure_date = models.DateField()
+    status = models.CharField(max_length=10, choices=status_booking, default="pending")
 
     def __str__(self):
         return str(self.booking_id)

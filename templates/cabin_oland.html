@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-    
+
     {% block main %}
-        <!-- content for cabin_salen.html -->
+    {% load crispy_forms_tags %}
+        <!-- content for cabin_oland.html -->
 
         <div class="container-xxl">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -44,6 +45,18 @@
         <div class="container">
           <div class="row">
             <h2>Make a reservation</h2>
+              <br>
+              <form method="post" class="my-class">
+                {% csrf_token %}
+
+                {{ guest_info | crispy }}
+
+                {{ booking_info | crispy }}
+                <br>
+                <button type="submit" class="btn btn-secondary">Make Reservation
+                </button>
+            </form>
+
           </div>
         </div>
 

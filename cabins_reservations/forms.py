@@ -13,12 +13,11 @@ class GuestInfo(forms.ModelForm):
 
 
 class BookingInfo(forms.ModelForm):
-    arrival = forms.DateField(widget=forms.DateInput(
+    arrival_date = forms.DateField(widget=forms.DateInput(
             attrs={'type': 'date', 'min': datetime.now().date()}))
-    departure = forms.DateField(widget=forms.DateInput(
+    departure_date = forms.DateField(widget=forms.DateInput(
             attrs={'type': 'date', 'min': datetime.now().date()}))
-    
 
     class Meta:
         model = Booking
-        fields = ('guests', 'arrival', 'departure')
+        fields = ('guests', 'cabin',)
