@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
     
     {% block main %}
         <!-- content for cabin_salen.html -->
 
         <h1>Wish to know more? Hala at me!</h1>
+
+        {{ form | crispy }}
+
     
+      
+
     {% endblock main %}
     

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'djreservation',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'cabin_web',
     'cabins_reservations',
     'guestbook',
@@ -165,3 +166,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
