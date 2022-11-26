@@ -9,10 +9,12 @@
     <br>
     <a href="{% url 'news' %}"><button class="btn btn-secondary">Back</button></a>
     {% if user.is_authenticated %}
+      {% if user.username == Admin %}
     <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-success">Edit</button></a>
     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Delete
   </button>
+    {% endif %}
     {% endif %}
   
   <!-- Modal -->

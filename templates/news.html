@@ -6,7 +6,9 @@
         <h1>What's up doodlilido?</h1>
         <br>
         {% if user.is_authenticated %}
+            {% if user.username == Admin %}
         <a href="{% url 'add_post' %}"><button class="btn btn-secondary">Add Post</button></a>
+        {% endif %}
         {% endif %}
         <div class="container-fluid">
             <div class="row">
