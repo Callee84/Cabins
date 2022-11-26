@@ -3,10 +3,13 @@
     
     {% block main %}
         <!-- content for cabin_salen.html -->
-
+        <div class="container">
         <h1>What's up doodlilido?</h1>
         <br>
-        <div class="container-fluid">
+        
+            <div class="row justify-content-center">
+                <div class="col-12 header-message">
+            <div class="">
             <a href="{% url 'add_guest_post' %}"><button>Add Post</button></a>
             <div class="row">
                 <div class="col-12 mt-3 left">
@@ -25,6 +28,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            </div>
             </div>
             {% if forloop.counter|divisibleby:3 %}
             <div class="row">
