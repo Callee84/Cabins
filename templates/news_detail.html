@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
     
     {% block main %}
-    <!-- content for news_details.html -->
+    <!-- content for the clicked news item -->
 
     <h1>{{ post.title }}</h1>
-    <p>Posted By: {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created }}</p>
-    <p>{{ post.content }}</p>
-    <br>
-    <a href="{% url 'news' %}"><button class="btn btn-secondary">Back</button></a>
+      <p>Posted By: {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created }}</p>
+      <p>{{ post.content }}</p>
+        <br>
+          <a href="{% url 'news' %}"><button class="btn btn-secondary">Back</button></a>
     {% if user.is_authenticated %}
-      {% if user.username == Admin %}
-    <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-success">Edit</button></a>
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Delete
-  </button>
+    {% if user.username == Admin %}
+          <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-success">Edit</button></a>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Delete
+        </button>
     {% endif %}
     {% endif %}
   
-  <!-- Modal -->
+  <!-- modal triggers when delete button is clicked-->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -27,9 +27,9 @@
         </div>
         <div class="modal-body">
           <h2>Delete?</h2>
-          <p>
+            <p>
           Are you sure you want to delete this post? It's pretty nice to read...
-          </p>
+            </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
