@@ -2,14 +2,16 @@
 {% load crispy_forms_tags %}
 
 {% block main %}
-
 <h1>Edit Post</h1>
 
 <form method="POST">
 {% csrf_token %}
 {{ form | crispy }}
+{% if user.is_authenticated %}
+{% if user.id == post.author.id %}
 <button class="btn btn-success">Edit</button>
+{% endif %}
+{% endif %}
 </form>
 
 {% endblock %}
-
