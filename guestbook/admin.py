@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PostGuest
+from .models import PostGuest, Category
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -8,4 +8,7 @@ class PostGuestNews(SummernoteModelAdmin):
 
     list_display = ('author', 'title', 'created', 'updated')
     search_fields = ['author', 'title']
-    summernote_fields = ('content')
+    summernote_fields = ('content',)
+
+
+admin.site.register(Category)

@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Guest, Booking
+from .models import Guest, Booking, Cabin
+
+
+@admin.register(Cabin)
+class Cabins(admin.ModelAdmin):
+    list_display = ('name', 'beds', 'capacity')
 
 
 @admin.register(Guest)

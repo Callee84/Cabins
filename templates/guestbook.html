@@ -27,6 +27,8 @@
                                 
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="card-text">{{ post.content }}</p>
+                                    <p class="card-text">Category: {{ post.category }}</p>
+
                                     {% if user.is_authenticated %}
                                     {% if user.id == post.author.id %}
                                     <a href="{% url 'edit_guest_post' post.pk %}"><button class="btn btn-success">Edit</button></a>

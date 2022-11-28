@@ -2,8 +2,9 @@ from django.shortcuts import render, reverse, get_object_or_404
 from django.contrib.auth.models import User
 from django.views import View
 import datetime
-from .models import Guest, Booking
+from .models import Guest, Booking, Cabin
 from .forms import GuestInfo, BookingInfo
+
 
 
 # Create your views here.

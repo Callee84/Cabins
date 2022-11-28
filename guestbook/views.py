@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import PostGuest
+from .forms import AddGuestPost
 # Create your views here.
 
 # def guestbook(request):
@@ -18,8 +19,9 @@ class PostGuestView(ListView):
 
 class AddGuestPost(CreateView):
     model = PostGuest
+    form_class = AddGuestPost
     template_name = 'add_guest_post.html'
-    fields = '__all__'
+    # fields = '__all__'
 
 
 class EditGuestPost(UpdateView):
