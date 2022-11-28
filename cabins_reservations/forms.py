@@ -6,7 +6,7 @@ from datetime import datetime
 from .models import cabin_choice, nr_of_guests
 
 
-class Availibility(forms.Form):
+class Booking(forms.Form):
     name = forms.CharField(max_length=200)
     guests = forms.ChoiceField(choices=nr_of_guests)
     cabin = forms.ChoiceField(choices=cabin_choice)
