@@ -1,47 +1,52 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, reverse, get_object_or_404, HttpResponse
 from django.contrib.auth.models import User
 from django.views import View
+from django.views.generic import FormView
 import datetime
 from .models import Guest, Booking, Cabin
-from .forms import GuestInfo, BookingInfo
+from .forms import Availibility
+from .availibility import check_availability
 
 
-
-# Create your views here.
-
-
-class cabinOland(View):
+class CabinOland(View):
     def get(self, request, *args, **kwargs):
 
-        guest_info = GuestInfo()
-        booking_info = BookingInfo()
-
-        return render(request, 'cabin_oland.html', {
-            'guest_info': guest_info,
-            'booking_info': booking_info
-        })
+        return render(request, 'cabin_oland.html')
 
     # return render(request, 'cabin_oland.html')
 
 
-class cabinSalen(View):
-      def get(self, request, *args, **kwargs):
+class CabinSalen(View):
+    def get(self, request, *args, **kwargs):
 
-        guest_info = GuestInfo()
-        booking_info = BookingInfo()
-
-        return render(request, 'cabin_salen.html', {
-            'guest_info': guest_info,
-            'booking_info': booking_info
-        })
+        return render(request, 'cabin_salen.html')
 
 
-def avalibility(request, User):
+class BookingView(FormView):
+    form_class = Availibility
+    template_name = 'booking.html'
 
-    avalible_date = len(Booking.objects.filter(
-        arrival_date=arrival,
-    ))
+    def valid_form(self, form):
+        data = form.cleaned_data
+        cabin_list = Cabin.objects.filter(category=data['cabin_choice'])
+        avalible_dates = []
+        for cabin in cabin_list:
+            if check_availability(
+                    cabin, data['arrival_date'], data['departure_date']):
+                avalible_dates.append(cabin)
 
+        if len(avalible_dates) > 0:
+            cabin = avalible_dates[0]
+            booking = Booking.objects.create(
+                user=self.request.user,
+                cabin=cabin,
+                arrival_date=data['arrival_date'],
+                departure_date=data['departure_date'],
+            )
+            booking.save()
+            return HttpResponse(booking)
+            success_url = reverse_lazy('home')
 
-# def BookingEnquiry(View):
-    
+        else:
+            return HttpResponse(
+                'This date is unavalible for this date, please choose anohter date.')

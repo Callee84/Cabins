@@ -1,6 +1,7 @@
 import datetime
 from .models import Cabin, Booking
 
+
 def check_availability(cabin, arrival_date, departure_date):
     avail_list = []
     booking_list = Booking.objects.filter(cabin=cabin)
