@@ -97,6 +97,7 @@ body {
 
 .index-body {
   margin-top: 3rem;
+  /* justify-content: center; */
 }
 
 .header-message {
@@ -108,20 +109,199 @@ body {
   margin-bottom: 3rem;
 }
 
+/* .card-body {
+  align-items: center;
+  overflow: hidden;
+} */
 
-/* cabin_salen */
-.video {
+.image-split-salen {
+  width: 300px;
+  height: 300px;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669323746/cabin_project/mountain_salen__lg_dws9lp.jpg);
+  background-repeat: none;
+  background-size: cover;
   position: relative;
-  max-width: 100%;
-  height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 .5rem 2.5rem rgba(0, 0, 0, 0.85);
+}
+
+/* .image-split oland {
+  width: 300px;
+  height: 300px;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669323746/cabin_project/beach_oland_lg_d8d6ih.jpg);
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 2.5rem rgba(0, 0, 0, 0.85);
+} */
+
+.image-split-salen::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(51, 43, 48, 0.85);
+}
+
+.image-split-salen .drapery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.image-split-salen .drapery span {
+  width: 20%;
+  height: 110%;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669704253/cabin_project/snowy_mountains_gfypcm.jpg);
+  transition: 0.9s ease-in-out;
+  align-items: center;
+  background-size: cover;
+}
+
+.image-split-salen .drapery span:nth-child(1) {
+  background-position: 0%;
+  transition-delay: 0;
+}
+
+.image-split-salen .drapery span:nth-child(2) {
+  background-position: 25%;
+  transition-delay: 0.1s;
+}
+
+.image-split-salen .drapery span:nth-child(3) {
+  background-position: 50%;
+  transition-delay: 0.2s;
+}
+
+.image-split-salen .drapery span:nth-child(4) {
+  background-position: 75%;
+  transition-delay: 0.3s;
+}
+
+.image-split-salen .drapery span:nth-child(5) {
+  background-position: 100%;
+  transition-delay: 0.4s;
+}
+
+.image-split-salen:hover .drapery > span {
+  transform: translateY(-100%);
+}
+
+.image-split-salen:hover .c-wrapper {
+  transform: translateY(0%);
+  transition: 0.9s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.image-split-salen {
+  width: 300px;
+  height: 300px;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669323746/cabin_project/mountain_salen__lg_dws9lp.jpg);
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 2.5rem rgba(0, 0, 0, 0.85);
+}
+
+.image-split-oland {
+  width: 300px;
+  height: 300px;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669323746/cabin_project/beach_oland_lg_d8d6ih.jpg);
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 2.5rem rgba(0, 0, 0, 0.85);
+}
+
+.image-split-oland::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(51, 43, 48, 0.85);
+}
+
+.image-split-oland .drapery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.image-split-oland .drapery span {
+  width: 20%;
+  height: 110%;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669323746/cabin_project/beach_oland_lg_d8d6ih.jpg);
+  transition: 0.9s ease-in-out;
+  align-items: center;
+  background-size: cover;
+}
+
+.image-split-oland .drapery span:nth-child(1) {
+  background-position: 0%;
+  transition-delay: 0;
+}
+
+.image-split-oland .drapery span:nth-child(2) {
+  background-position: 25%;
+  transition-delay: 0.1s;
+}
+
+.image-split-oland .drapery span:nth-child(3) {
+  background-position: 50%;
+  transition-delay: 0.2s;
+}
+
+.image-split-oland .drapery span:nth-child(4) {
+  background-position: 75%;
+  transition-delay: 0.3s;
+}
+
+.image-split-oland .drapery span:nth-child(5) {
+  background-position: 100%;
+  transition-delay: 0.4s;
+}
+
+.image-split-oland:hover .drapery > span {
+  transform: translateY(-100%);
+}
+
+.image-split-oland:hover .c-wrapper {
+  transform: translateY(0%);
+  transition: 0.9s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.c-wrapper {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  text-align: center;
+  flex-direction: column;
+  columns: white;
+  padding: 2rem 2rem;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  color: rgb(255, 255, 255);
+
 }
 
-.snow {
-  position: absolute;
+.c-wrapper h3 {
+  font-family: cursive;
 }
+
+
 
 /*------------------------------ | footer | ----------------------------*/
 

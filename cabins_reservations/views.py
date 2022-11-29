@@ -2,7 +2,6 @@ from django.shortcuts import render, reverse, get_object_or_404, HttpResponse
 from django.contrib.auth.models import User
 from django.views import View
 from django.views.generic import ListView, CreateView, FormView
-from datetime import datetime
 from .models import Guest, Booking, Cabin, cabin_choice
 from .forms import Booking
 from .availability import check_availability
@@ -40,20 +39,11 @@ class BookingView(FormView):
         avalible_cabin = []
         for cabin in cabin_list:
             if check_availability(
-                   cabin, data['arrival_date'], data['departure_date']):
+                   cabin, data.date['arrival_date'], data.date['departure_date']):
                 avalible_cabin.append(cabin)
-                print(data['arrival_date'])
-                print(type(data['arrival_date']))
- 
-        if len(avalible_cabin) > 0:
-            cabin = avalible_cabin[0]
-            booking = Booking.objects.create(
-               user=self.request.user,
-               cabin=cabin,
-               arrival_date=data['arrival_date'],
-               departure_date=data['departure_date'],)
+            print(type(data['arrival_date']))
             booking.save()
  
-        # else:
-        #     return HttpResponse(
-        #        'Sorry, that date is already booked. Please pick another date.')
+        else:
+            return HttpResponse(
+               'Sorry, that date is already booked. Please pick another date.')
