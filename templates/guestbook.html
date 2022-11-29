@@ -3,10 +3,16 @@
     
     {% block main %}
         <!-- content for cabin_salen.html -->
-    <div class="container-fluid">
-        <div class="row">
-            <h1>What's up doodlilido?</h1>
-            <br>
+<div class="guestbook-img">
+  <div class="guestbook-img-text">
+    <h1>What's on your mind?</h1>
+      <h5>Here you can leave comments about the cabins or something else 
+          that you wish to convey to other guests.</h5>
+  </div>
+</div>
+     <br>
+<div class="container guestbook-header">
+  <div class="row">
         {% if user.is_authenticated %}
         <a href="{% url 'add_guest_post' %}"><button class="btn btn-success">Add Post</button></a>
         {% endif %}

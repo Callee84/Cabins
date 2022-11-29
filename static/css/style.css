@@ -1,6 +1,7 @@
 body {
     background-color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 /*-----------------------------------------| navbar |-----------------------------*/
@@ -89,6 +90,41 @@ body {
   height: 40rem;
 }
 
+/*------------------------------ | index countdown | ----------------------------*/
+
+
+.count-cont h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  padding: 2rem;
+  background-color: aliceblue;
+  opacity: 0.6;
+}
+
+.count-cont {
+  z-index: 1;
+ }
+
+.count-cont h1 {
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: aliceblue;
+  opacity: 0.6;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+.day,
+.hour,
+.min,
+.secs {
+  font-size: 3rem;
+}
 /*-------------------------------- | index body | ----------------------------*/
 
 .index-body {
@@ -293,7 +329,37 @@ body {
   font-family: cursive;
 }
 
+/*------------------------------ | news | --------------------------------*/
 
+.news-img {
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669743214/cabin_project/news_aeopfd.jpg) center center;
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+  white-space: pre;
+  color: black;
+}
+
+.news-detail {
+  margin-top: 3rem;
+}
+
+/*------------------------------ | guestbook | ----------------------------*/
+
+.guestbook-img {
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669739763/cabin_project/guestbook_a7grzx.jpg);
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+  white-space: pre;
+  color: black;
+}
+
+/*------------------------------ | sign out | ----------------------------*/
+
+.sign-out {
+  margin: 3rem;
+}
 
 /*------------------------------ | footer | ----------------------------*/
 

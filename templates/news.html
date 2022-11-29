@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
     
-    {% block main %}
-        <!-- content for cabin_salen.html -->
-
-        <h1>What's up doodlilido?</h1>
-        <br>
-        {% if user.is_authenticated %}
-            {% if user.id == 1 %}
-        <a href="{% url 'add_post' %}"><button class="btn btn-secondary">Add Post</button></a>
+{% block main %}
+<div class="news-img">
+    <div class="guestbook-img-text">
+        <h2>Want to know what's up? We try to keep you updated!</h2>
+    </div>
+</div>
+<div class="container">
+        <h1></h1>
+            <br>
+    {% if user.is_authenticated %}
+        {% if user.id == 1 %}
+            <a href="{% url 'add_post' %}"><button class="btn btn-secondary">Add Post</button></a>
         {% endif %}
-        {% endif %}
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 mt-3 left">
+    {% endif %}
+    
+        <div class="row">
+            <div class="col-12 mt-3 left">
                 {% for post in post_list %}
                     <div class="col-md-4">
                         <div class="card mb-4">
@@ -27,13 +31,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
-            {% if forloop.counter|divisibleby:3 %}
-            <div class="row">
-            {% endif %}
-            {% endfor %}
-            
         </div>
-    
-    {% endblock main %}
+                {% if forloop.counter|divisibleby:3 %}
+            <div class="row">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>  
+    </div>
+
+{% endblock %}

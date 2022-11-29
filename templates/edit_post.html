@@ -2,14 +2,16 @@
 {% load crispy_forms_tags %}
 
 {% block main %}
+    <div class="container d-flex justify-content-center">
+        <div class="col-sm-6">
+            <h1>Edit Post</h1>
 
-<h1>Edit Post</h1>
-
-<form method="POST">
-{% csrf_token %}
-{{ form | crispy }}
-<button class="btn btn-success">Edit</button>
-</form>
-
+            <form method="POST">
+            {% csrf_token %}
+            {{ form | crispy }}
+                <button class="btn btn-success">Edit</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}
 
