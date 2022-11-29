@@ -6,6 +6,7 @@ from .models import Guest, Booking, Cabin, cabin_choice
 from .forms import Booking
 from .availability import check_availability
 from django.urls import reverse_lazy
+import datetime
 
 
 class CabinOland(View):
@@ -28,22 +29,25 @@ class CabinView(ListView):
     model = Cabin
 
 
-class BookingView(FormView):
-    form_class = Booking
-    template_name = 'booking.html'
-    success_url = reverse_lazy('booking')
+def new_booking(self, request, User=User, *args, **kwargs):
+    booking_form = Booking(data=request.POST)
 
-    def form_valid(self, form):
-        data = form.cleaned_data
-        cabin_list = Cabin.objects.filter(name=data['cabin'])
-        avalible_cabin = []
-        for cabin in cabin_list:
-            if check_availability(
-                   cabin, data.date['arrival_date'], data.date['departure_date']):
-                avalible_cabin.append(cabin)
-            print(type(data['arrival_date']))
-            booking.save()
- 
-        else:
-            return HttpResponse(
-               'Sorry, that date is already booked. Please pick another date.')
+    if booking_form.is_valid():
+        guest_name = request.POST.get('guest')
+        guest_no_of_guests = request.POST.get('guests')
+        guest_arrival_date = request.POST.get('arrival_date')
+        guest_departure_date = request.POST.get('departure_date')
+
+        # convert to date format
+        conv_guest_arrival = datetime.datetime.strptime(
+            guest_arrival_date, '%d/%m/%Y')
+        conv_guest_dep = datetime.datetime.strptime(
+            guest_departure_date, '%d/%m/%Y')
+
+        booking = booking_form.save(commit=False)
+            # Pass formatted date & customer in to model
+        booking.arrival_date = conv_guest_arrival
+        booking.departure_date = conv_guest_departure
+        reservation.customer = customer
+            # Save reservation
+        booking_form.save()
