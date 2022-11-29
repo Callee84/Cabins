@@ -9,7 +9,7 @@ The Cabins is a fictional booking site for two cabins. One in the mountains of S
 ---
 
 ## **UX**
-While planing this project / site I first started I brokit down to the 5 planes of:
+While planing this project / site I first started I broke it down to the 5 planes of:
 
 - The Strategy Plane
 - The Scope Plane
@@ -55,3 +55,107 @@ In order to achieve the desired admin and user goals, the following features wil
 ---
 
 ## **The Structure Plane**
+
+
+
+
+---
+
+## **Technologies Used**
+
+- [Python](https://www.python.org/) 
+- *The following Python modules were used on this project,*
+    - asgiref==3.5.2
+    - cloudinary==1.30.0
+    - dj-database-url==0.5.0
+    - dj3-cloudinary-storage==0.0.6
+    - Django==3.2.16
+    - django-allauth==0.51.0    
+    - django-reservation==0.2.10
+    - django-summernote==0.8.20.0
+    - gunicorn==20.1.0
+    - oauthlib==3.2.2
+    - psycopg2==2.9.5
+    - PyJWT==2.6.0
+    - python3-openid==3.2.0
+    - pytz==2022.6
+    - requests-oauthlib==1.3.1
+    - sqlparse==0.4.3
+- [ElephantSQL](https://www.elephantsql.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+- [GitHub](https://github.com/)
+- [Gitpod](https://www.gitpod.io/)
+- [Heroku](https://dashboard.heroku.com/apps)
+- [Cloudinary](https://cloudinary.com/)
+
+---
+
+## Deployment
+
+### Github & Gitpod
+
+I used the Code Institiue student template as a base for this project.
+
+[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+- Click the *Use This Template* button.
+- Give your repository a name, and description if you wish.
+- Click the *Create Repository from Template* to create your repository. 
+- Click the *Gitpod* button to create a gitpod workspace, this can take a few minutes.
+- When working on project using Gitpod, please open the workspace from Gitpod, this will open your previous workspace rather than creating a new one.
+Use the following commands to commit your work, 
+- `git add . ` - adds all modified files to a staging area.
+- `git commit -m "A short message exlaining your commit"` - commits all changes to a local repository.
+- `git push` - pushes all your commited changes to your Github repository.
+
+*Forking the GitHub Repository*
+
+If you want to make changes to your repository without affecting it, you can make a copy of it by 'Forking' it. This ensures your original repository remains unchanged.
+
+### Creating an Application with Heroku
+
+I followed the below steps using the Code Institute tutorial, *with the updated information* and [Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
+
+- The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies `pip3 freeze --local > requirements.txt`. 
+- A `Procfile` is also required that specifies the commands that are executed by the Heroku app on startup. 
+
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in; if you do not already have an account then you will need to create one.
+
+![Heroku start app](./cabin/assets/img/heroku_start.jpeg)
+
+2. Click the `New` dropdown and select `Create New App`.
+
+![Heroku start app](./cabin/assets/img/heroku_create.jpeg)
+
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+
+
+4. Select the region you are working in.
+
+*Heroku Settings*
+You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
+
+c
+- In the Settings tab, click on `Reveal Config Vars` and set the following variables:
+    - CLOUDINARY_URL - to be set to your Cloudinary API environment variable
+    - DATABASE_URL - to be set to your database *In my the URL to my ElephantSQL database*
+    - PORT - 8000
+    - SECRET_KEY - to be set to your chosen key
+    - DISABLE_COLLECTSTATIC - 1
+
+![Heroku start app](./cabin/assets/img/heroku_config_see.jpg)
+
+
+*Heroku Deployment*
+In the Deploy tab:
+1. Connect your Heroku account to your Github Repository following these steps:
+    1. Click on the `Deploy` tab and choose `Github-Connect to Github`.
+    2. Enter the GitHub repository name and click on `Search`.
+    3. Choose the correct repository for your application and click on `Connect`.
+2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
+3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should see the below `View` button, click this to open your application:
+
+
