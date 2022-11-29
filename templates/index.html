@@ -25,33 +25,52 @@
             <h2>Welcome to StarCabins! When the Cabin is the Star.</h2> 
         </div>
     </div>
-
-<div class="row">
-    <div class="col-sm-6">
-        <div class="image-split-salen">
+</div>
+<div class="container d-flex justify-content-around">
+  <div class="row row-cols-1 row-cols-md-2 g-4 ">
+    <div class="col">
+      <div class="card card-salen-body">
+        <div class="col-sm-6 salen-body-img">
+          <div class="image-split-salen">
+              <div class="drapery">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="c-wrapper">
+                <h3 class="card-title">Sälen</h3>
+                <p class="card-text">Located in Linvallen, one of the most popular skiresorts in Sweden. Only 3 minute drive from the 31 slopes that Linvallen has to offer.</p>
+                <a href="{% url 'cabin_salen' %}" class="btn btn-primary">Visit Sälen</a>
+              </div>
+            </div>
+        </div>
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card card-oland-body">
+        <div class="col-sm-6 oland-body-img">
+          <div class="image-split-oland">
             <div class="drapery">
               <span></span><span></span><span></span><span></span><span></span>
             </div>
             <div class="c-wrapper">
-              <h3 class="card-title">Sälen</h3>
-              <p class="card-text">Located in Linvallen, one of the most popular skiresorts in Sweden. Only 3 minute drive from the 31 slopes that Linvallen has to offer.</p>
-              <a href="{% url 'cabin_salen' %}" class="btn btn-primary">Visit Sälen</a>
+              <h3 class="card-title">Öland</h3>
+              <p class="card-text">Want some peace and quiet but with the possibility of some party and? Located only 10 minutes from Borgholm and the beautiful sandy beaches of Köpingsvik.</p>
+              <a href="{% url 'cabin_oland' %}" class="btn btn-primary">Visit Öland</a>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="image-split-oland">
-          <div class="drapery">
-            <span></span><span></span><span></span><span></span><span></span>
           </div>
-          <div class="c-wrapper">
-          <h3 class="card-title">Öland</h3>
-          <p class="card-text">Want some peace and quiet but with the possibility of some party and? Located only 10 minutes from Borgholm and the beautiful sandy beaches of Köpingsvik.</p>
-          <a href="{% url 'cabin_oland' %}" class="btn btn-primary">Visit Öland</a>
-          </div>
+      </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
+      </div>
     </div>
   </div>
 </div>
+
 {% endblock %}
 

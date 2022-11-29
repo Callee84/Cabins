@@ -77,10 +77,37 @@
 
     {% endblock main %}
 
-    <footer>
-      <div class="container">
-        <div id="map"></div>
+    <footer class="bg-light">
+      <div class="row foot">
+        <div class="col-sm-4">
+          <div class="card card-salen-footer">
+            <div class="card-body">
+              <h5 class="card-title">Sälen</h5>
+              <p class="card-text">Hattvägen 7</p>
+              <p class="card-text">Sälen, Sweden</p>
+              <a href="{% url 'cabin_salen' %}" class="btn btn-primary">Visit Sälen</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card card-oland-footer">
+            <div class="card-body">
+              <h5 class="card-title">Öland</h5>
+              <p class="card-text">Norra Landborgsgatan 2</p>
+              <p class="card-text">Öland, Sweden</p>
+              <a href="{% url 'cabin_oland' %}" class="btn btn-primary">Visit Öland</a>
+            </div>
+          </div>
+        </div>
       </div>
+
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
