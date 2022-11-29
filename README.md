@@ -44,3 +44,14 @@ There are ofcourse a couple of core components for this site.
 - As a Site User I can see pictures of the cabins so that I know what the cabins look like before I make my booking/ reservation.
 - As a Site User I can fill put a contact form so that I can contact the site administrators if I have any questions.
 
+---
+### **The Scope Plane**
+In order to achieve the desired admin and user goals, the following features will be included in this website:
+
+- Responsive navbar that will navigate to the various pages throughout the site
+- Landing page with brief information about the cabins and the cabins locations.
+- Register/login feature using Django allauth
+
+---
+
+## **The Structure Plane**
