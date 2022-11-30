@@ -413,7 +413,6 @@ footer {
 
 div#map {
   height: 15rem;
-  width: 20rem;
   margin-inline: auto;
   /* border-color: #080808 1px solid; */
 }
@@ -437,3 +436,35 @@ div#map {
   text-align: center;
   background-color: unset;
 }
+
+/*------------------------------ | media queries | ----------------------------*/
+
+/*--------------- | footer | ---------------------*/
+
+@media screen and (max-width: 450px) {  
+  .salen-body-img {
+    padding-left: 3rem;
+  }
+  .oland-body-img {
+    padding-left: 3rem;
+  }
+
+  .card-salen-footer {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+}
+
+/*--------------- | index | ---------------------*/
+
+@media screen and (max-width: 770px) {  
+  .salen-body-img {
+    padding-left: 1rem;
+  }
+  .oland-body-img {
+    padding-left: 1rem;
+  }
+}
+
+/*--------------- | footer | ---------------------*/

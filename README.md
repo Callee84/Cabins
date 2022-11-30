@@ -93,7 +93,33 @@ In the cabin_reservation app is the models for Guest, Cabin and Booking. This pr
 
 ### **Features**
 
+**Navigation Bar**
+The navbar is implemented on every page and is fully responsive across all resolutions.
+Users can navigate across the site freely with links not only on the navbar but also thouhout the diffent pages.
+If the user is logged in then they will see a `Welcome:` follwed by their name and beside that the `Sign Out` link. If the user isn't logged in then they will see a link for `Register` or `Log In` which of course will take the user to the respective pages. 
 
+![Navbar desktop](./cabin/assets/img/navbar_full.jpg)
+
+For the tablet and mobile devices I've used a collapsable navbar with a small animation when clicking the hamburger menu.
+
+![Navbar mobile and tablet](./cabin/assets/img/collapse.jpg)
+
+
+![Navbar mobile and tablet](./cabin/assets/img/ham_open.jpg)
+
+**Footer**
+
+Just like the navigation bar, the footer is also implemented on every page containing adresses to both cabins and a Google Map showing their locations. Under the adresses fo the cabins I've provided links to their respective pages. 
+
+
+**Home Page**
+
+The home page greets you with a nice snowy mountain image featuring a JavaScript function countdown. Just above the fold the is a H1 displaying a catchy(?) slogan inviting the user to scroll down where they will find an introduction for the cabins and links both below and in the images. There's an hover animation on both images which will show a a brief text and also a link to their respective page.
+
+![Home page](./cabin/assets/img/home_page.jpg)
+
+
+![Cabin Sälen]
 
 ## **Technologies Used**
 
