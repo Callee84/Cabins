@@ -3,14 +3,18 @@
 
     {% block main %}
         <!-- content for cabin_salen.html -->
-<div class="contact-img">
+<div class="contact-img img-fluid">
     <div class="row question">
-        <h1>Contact us if you have any questions.</h1>
+        <h1>Contact us</h1>
+        <br>
+
     </div>
 </div>
     <div class="container">
+        <h5>Send us a message with you enquiry</h5>
+        <h5>We'll get back to you <br> as soon as possible.</h5>
             <div class="row">
-        {% if message_name %}
+        {% if name %}
         <center class="thanks">
             <h3>Thanks for contacting us {{ message_name }}!</h3>
             <br>
@@ -30,6 +34,7 @@
                     {% csrf_token %}
                    
                     {{ form | crispy}}
+                    <br>
                     <button class="btn btn-success">Send</button>
                </form>
             </div>
