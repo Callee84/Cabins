@@ -64,6 +64,7 @@
           <form action="{% url 'deleted_guest_post' post.pk %}" method="post">
             {% csrf_token %}
           <button class="btn btn-danger">Delete</button>
+          </form>
         </div>
       </div>
     </div>

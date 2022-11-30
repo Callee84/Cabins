@@ -7,11 +7,10 @@
     </div>
 </div>
 <div class="container">
-        <h1></h1>
             <br>
     {% if user.is_authenticated %}
         {% if user.id == 1 %}
-            <a href="{% url 'add_post' %}"><button class="btn btn-secondary">Add Post</button></a>
+            <a href="{% url 'add_post' %}"><button class="btn btn-primary">Add Post</button></a>
         {% endif %}
     {% endif %}
     
@@ -37,8 +36,7 @@
             <div class="row">
                     {% endif %}
                 {% endfor %}
-            </div>
-        </div>  
-    </div>
+            </div> 
+</div>
 
 {% endblock %}

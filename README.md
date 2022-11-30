@@ -1,5 +1,7 @@
 # **The Cabins**
 
+![](./cabin/assets/img/mockup_cabins.png)
+
 This is the fourth milestone project in the Code Institute Full Stack Developer program. The project is a full-stack framework and has been built for educational purposes. The technologies used for this project are HTML, CSS, JavaScript, Python, and Django.
 
 The Cabins is a fictional booking site for two cabins. One in the mountains of Sälen, Sweden and the ohter on the island of Öland, Swenden. 
@@ -55,11 +57,42 @@ In order to achieve the desired admin and user goals, the following features wil
 ---
 
 ## **The Structure Plane**
+This website is made up with 5 apps (4 of which is connected to the front end)
+- cabin_web - the core
+- news - handles the news articles that admin manages
+- guestbook - hadles the user created posts
+- contact - handles the contact form
+- cabin_reservation
+
+### *The news app*
+The Post model class porvides the model for the admin to create news articles which is dispalyed on the /news page. It also hold the form for which provides the form that is accessable though the front end.
+
+### *The guestbook app*
+Just like the news app, the guestbook app provides the model for the user to leave a feedback / post for everryone to read.
+
+### *The contact app*
+The contact app provides the form for which the user can send an email to the admin (me) with a question or inquiry for a reservation.
+
+### *The cabin_reservation app*
+In the cabin_reservation app is the models for Guest, Cabin and Booking. This provide the admin with the ability to handle bookings on the back end. There is also a form that will (in the future) give the user the abilitiy to book a cabin directily on the website
 
 
+
+
+**UserProfile**
+- The user profile is connected to the User model created by Allauth on registration.
 
 
 ---
+
+## **The Skeleton Plane**
+
+
+---
+
+## **The Surface Plane**
+
+
 
 ## **Technologies Used**
 
@@ -157,5 +190,12 @@ In the Deploy tab:
     3. Choose the correct repository for your application and click on `Connect`.
 2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
 3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should see the below `View` button, click this to open your application:
+
+
+## Credits
+
+Building this website I've used a lot of different sources to seach for functions & bug fixes. 
+I've used boostrap as a core for style. The split image i found as a code along on youtube with credit to Code Instinct.
+For the news / post funcitions I've took inspiration from Code Institute's Walkthough project "I Think Therefore I Blog" and John Elder from Codemy.com.
 
 
