@@ -329,6 +329,10 @@ body {
   font-family: cursive;
 }
 
+
+.carousel-inner {
+  height: 35rem;
+}
 /*------------------------------ | news | --------------------------------*/
 
 .news-img {
@@ -407,10 +411,17 @@ div#map {
   height: 15rem;
   width: 20rem;
   margin-inline: auto;
-  border-color: #080808 1px solid;
+  /* border-color: #080808 1px solid; */
 }
 
 .card-salen-footer {
+  margin-top: 2.5rem;
+  border: none;
+  text-align: center;
+  background-color: unset;
+} 
+
+.card-map-footer {
   margin-top: 2.5rem;
   border: none;
   text-align: center;

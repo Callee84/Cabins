@@ -4,7 +4,7 @@
     {% load crispy_forms_tags %}
         <!-- content for cabin_oland.html -->
 
-        <div class="container-xxl">
+        <div class="container">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner index-carousel">
                 <div class="carousel-item active">
@@ -32,7 +32,18 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">Kolstad</h5>
-                      <p class="card-text">Want some peace and quiet but with the possibility of some party and? Located only 10 minutes from Borgholm and the beautiful beaches of Köpingsvik.</p>
+                      <p class="card-text">Want some peace and quiet but with the possibility of some party and? 
+                                          Located only 10 minutes from Borgholm and the beautiful beaches of Köpingsvik.
+                                          Holiday home built in 2018, with open floor plan and generous spaces.
+                                          Large lovely terrace where you can hang out, sunbathe, grill and have a good time.
+                                          Here you also have fantastic evening sun that you can enjoy. Follow 
+                                          the road straight down 650 m and you will come to Kalmarsund, which offers Öland's 
+                                          absolute best sandy beaches with a lovely shallow swimming beach that is suitable 
+                                          for families with children. In Köpingsvik there is a patisserie, grocery store and 
+                                          some smaller shops, as well as some restaurants and pubs. There are also a couple of 
+                                          very nice beach restaurants with entertainment and after beach every evening 
+                                          during the summer. Everything within walking distance from the house</p>
+                                          <br>
                       <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
                     </div>
                   </div>
@@ -41,8 +52,8 @@
             </div>
             <br>
         <div class="container">
-          <a href="{% url 'booking' %}">
-            <button class="btn btn-primary">Make a reservation</button>
+          <a href="{% url 'contact' %}">
+            <button class="btn btn-primary">Make a reservation inquiry</button>
           </a>
         
         </div>

@@ -4,14 +4,14 @@
     {% load crispy_forms_tags %}
         <!-- content for cabin_salen.html -->
 
-        <div class="container-xxl">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner index-carousel">
+        <div class="container">
+          <div id="carouselExampleSlidesOnly" class="carousel slide carousel-salen" data-bs-ride="carousel">
+              <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316123/static/media/img/hatt_front.8f8da4e0674d.jpg" class="d-block w-100" alt="...">
+                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316123/static/media/img/hatt_front.8f8da4e0674d.jpg" class="d-block w-100" alt="A house covered in snow">
                 </div>
                 <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316121/static/media/img/bedrrom_salen.633e4ad31575.jpg" class="d-block w-100" alt="...">
+                  <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316121/static/media/img/bedrrom_salen.633e4ad31575.jpg" class="d-block w-100" alt="A nice wintery bed">
                 </div>
                  <div class="carousel-item">
                   <img src="https://res.cloudinary.com/drlxdx65k/image/upload/v1669316120/static/media/img/kitchen_salen.b396e705afb6.jpg" class="d-block w-100" alt="...">
@@ -32,7 +32,15 @@
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">Hattvägen</h5>
-                      <p class="card-text">Located in Linvallen, one of the most popular skiresorts in Sweden. Only 3 minute drive from the 31 slopes that Linvallen has to offer.</p>
+                      <p class="card-text">Located in Linvallen, one of the most popular skiresorts in Sweden. 
+                                            Only 3 minute drive from the 31 slopes that Linvallen has to offer. <br>
+                                            The cabin is optimized for large parties with its fireplace in the 
+                                            middle of the room and the long walnut table for cozy dinners. 
+                                            Atmospheric logs adorn the roof and the total area of ​​214 square meters. 
+                                            Many have celebrated holidays such as Christmas, New Year and Easter here,
+                                            but also the occasional 50th anniversary celebration and wedding.
+                                            The cabin naturally has ski-in/ski-out mode and about 1 km from the nearest 
+                                            cross-country track.</p>
                       <a href="{% url 'home' %}"><button class="btn btn-secondary">Back</button></a>
                     </div>
                   </div>
@@ -42,8 +50,8 @@
             <br>
 
             <div class="container">
-              <a href="{% url 'booking' %}">
-                <button class="btn btn-primary">Make a reservation</button>
+              <a href="{% url 'contact' %}">
+                <button class="btn btn-primary">Make a booking inquiry</button>
               </a>
             
             </div>
