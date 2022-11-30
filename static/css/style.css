@@ -48,6 +48,10 @@ body {
   margin-top: 0px;
 }
 
+/* l.nav-right.navbar-nav.w-100 {
+  justify-content: end;
+} */
+
 /* when nav-icon is clicked */
 
 .navbar-toggler .top {

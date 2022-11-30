@@ -194,8 +194,13 @@ In the Deploy tab:
 
 ## Credits
 
-Building this website I've used a lot of different sources to seach for functions & bug fixes. 
-I've used boostrap as a core for style. The split image i found as a code along on youtube with credit to Code Instinct.
-For the news / post funcitions I've took inspiration from Code Institute's Walkthough project "I Think Therefore I Blog" and John Elder from Codemy.com.
+- Building this website I've used a lot of different sources to seach for functions & bug fixes.
+- I've used boostrap as a core for style & CSS 
+- The split image i found as a code along on youtube with credits to Code Instinct.
+- For the news / post funcitions I've took inspiration from Code Institute's Walkthough project "I Think Therefore I Blog" and John Elder from Codemy.com.
+
+- Big thanks to Ed in Tutor support who helped me massivly when i had to drop the database and start over.
+
+- As always, a massive thanks to my mentor Harry Dhillon for pointing me in the right direction when I'm a bit lost.
 
 
