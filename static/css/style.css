@@ -355,6 +355,29 @@ body {
   color: black;
 }
 
+/*------------------------------ | contact | ----------------------------*/
+
+.contact-img {
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669758512/cabin_project/got_questions_cibxmx.jpg);
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+  white-space: pre;
+  color: black;
+}
+
+.question h1 {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.thanks {
+  margin-top: 3rem;
+}
+
+.contact-form {
+  margin-top: 3rem;
+}
 /*------------------------------ | sign in | ----------------------------*/
 
 .sign-in {
