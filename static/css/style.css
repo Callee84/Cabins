@@ -439,7 +439,18 @@ div#map {
 
 /*------------------------------ | media queries | ----------------------------*/
 
-/*--------------- | footer | ---------------------*/
+/*--------------- | screens from 770px and down | ---------------------*/
+
+@media screen and (max-width: 770px) {  
+  .salen-body-img {
+    padding-left: 3rem;
+  }
+  .oland-body-img {
+    padding-left: 3rem;
+  }
+}
+
+/*--------------- | screens from 450px and down | ---------------------*/
 
 @media screen and (max-width: 450px) {  
   .salen-body-img {
@@ -454,17 +465,10 @@ div#map {
     margin-bottom: 2rem;
   }
 
-}
-
-/*--------------- | index | ---------------------*/
-
-@media screen and (max-width: 770px) {  
-  .salen-body-img {
-    padding-left: 1rem;
-  }
-  .oland-body-img {
-    padding-left: 1rem;
+  .card-body-sälen {
+    padding: inherit;
   }
 }
+
 
 /*--------------- | footer | ---------------------*/
