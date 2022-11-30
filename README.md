@@ -53,6 +53,7 @@ In order to achieve the desired admin and user goals, the following features wil
 - Responsive navbar that will navigate to the various pages throughout the site
 - Landing page with brief information about the cabins and the cabins locations.
 - Register/login feature using Django allauth
+- Contact for booking inquiry
 
 ---
 
@@ -77,8 +78,6 @@ The contact app provides the form for which the user can send an email to the ad
 In the cabin_reservation app is the models for Guest, Cabin and Booking. This provide the admin with the ability to handle bookings on the back end. There is also a form that will (in the future) give the user the abilitiy to book a cabin directily on the website
 
 
-
-
 **UserProfile**
 - The user profile is connected to the User model created by Allauth on registration.
 
@@ -91,6 +90,8 @@ In the cabin_reservation app is the models for Guest, Cabin and Booking. This pr
 ---
 
 ## **The Surface Plane**
+
+### **Features**
 
 
 
