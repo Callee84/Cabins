@@ -353,7 +353,7 @@ body {
 }
 
 #more-info-btn {
-  margin-left: 45%;
+  margin-left: 44%;
 }
 
 
@@ -362,7 +362,15 @@ body {
 }
 
 #inquiry-btn {
-  margin-left: 41%;
+  margin-left: 42%;
+}
+
+/*------------------------------ | cabin oland | --------------------------------*/
+
+.cabin-oland-img {
+  height: 30rem;
+  width: 100%;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669879549/cabin_project/hus_oland_zbmv3p.jpg) no-repeat center center;
 }
 
 
@@ -484,7 +492,7 @@ div#map {
 @media screen and (max-width: 1100px) {
   .carousel {
     max-width: 800px;
-    margin-left: 2.8rem;
+    margin-left: 4.5rem;
   }
 
   #more-info-btn {
@@ -508,9 +516,15 @@ div#map {
   }
 
   .cabin-salen-img {
-    height: 15rem;
+    height: 30rem;
     width: 100%;
     background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669874160/cabin_project/hatt_front_tablet_z67qtr.jpg) no-repeat center center;
+  }
+
+  .cabin-oland-img {
+    height: 30rem;
+    width: 100%;
+    background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669879549/cabin_project/hus_oland_tablet_rahmvt.jpg) no-repeat center center;
   }
 
   .card-info-cabin {
@@ -558,6 +572,12 @@ div#map {
     height: 20rem;
     width: 100%;
     background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669844798/cabin_project/hatt_front_nlvgcl_tablet_kopia_vxlnyz.jpg) no-repeat center center;
+  }
+
+  .cabin-oland-img {
+    height: 20rem;
+    width: 100%;
+    background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669879549/cabin_project/hus_oland_zbmv3p.jpg) no-repeat center center;
   }
 
   #more-info-btn {
