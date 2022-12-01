@@ -338,6 +338,11 @@ body {
   height: 35rem;
 }
 
+.carousel {
+  max-width: 800px;
+  /* margin-left: 17rem; */
+}
+
 /*------------------------------ | cabin salen | --------------------------------*/
 
 .cabin-salen-img {
@@ -346,6 +351,20 @@ body {
   background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669844267/cabin_project/hatt_front_nlvgcl-Sharpened_wmpspu.jpg) no-repeat center center;
  
 }
+
+#more-info-btn {
+  margin-left: 45%;
+}
+
+
+#more-info {
+  margin-top: 1rem;
+}
+
+#inquiry-btn {
+  margin-left: 41%;
+}
+
 
 /*------------------------------ | news | --------------------------------*/
 
@@ -450,12 +469,40 @@ div#map {
 
 /*------------------------------ | media queries | ----------------------------*/
 
+
+/*--------------- | screens from 1400px and down | ---------------------*/
+
+@media screen and (max-width: 1400px) {
+  .carousel {
+    max-width: 800px;
+    margin-left: 12rem;
+  }
+}
+
+/*--------------- | screens from 1100px and down | ---------------------*/
+
+@media screen and (max-width: 1100px) {
+  .carousel {
+    max-width: 800px;
+    margin-left: 2.8rem;
+  }
+
+  #more-info-btn {
+    margin-left: 41%;
+  }
+
+  #inquiry-btn {
+    margin-left: 38.5%;
+  }
+}
+
 /*--------------- | screens from 770px and down | ---------------------*/
 
 @media screen and (max-width: 770px) {  
   .salen-body-img {
     padding-left: 3rem;
   }
+
   .oland-body-img {
     padding-left: 3rem;
   }
@@ -464,6 +511,23 @@ div#map {
     height: 15rem;
     width: 100%;
     background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669874160/cabin_project/hatt_front_tablet_z67qtr.jpg) no-repeat center center;
+  }
+
+  .card-info-cabin {
+    border: none;
+  }
+  
+  .carousel {
+    margin-left: 0;
+  }
+
+  #more-info-btn {
+    margin-left: 40%;
+  }
+
+  #inquiry-btn {
+    margin-left: 34%;
+  }
 
 }
 
@@ -496,6 +560,18 @@ div#map {
     background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669844798/cabin_project/hatt_front_nlvgcl_tablet_kopia_vxlnyz.jpg) no-repeat center center;
   }
 
+  #more-info-btn {
+    margin-left: 30%;
+  }
+
+  .carousel {
+    height: 20rem;
+  }
+
+  #inquiry-btn {
+    margin-left: 23%;
+  }
+
   footer {
     height: 50rem;
     margin-top: 5rem;
@@ -515,6 +591,14 @@ div#map {
   .oland-body-img {
     padding-left: 1.5rem;
   }
+
+  #more-info-btn {
+    margin-left: 26%;
+  }
+
+  #inquiry-btn {
+    margin-left: 20%;
+  }
 }
 
 /*--------------- | screens from 330px and down | ---------------------*/
@@ -525,5 +609,13 @@ div#map {
   }
   .oland-body-img {
     padding-left: .5rem;
+  }
+
+  #more-info-btn {
+    margin-left: 22%;
+  }
+
+  #inquiry-btn {
+    margin-left: 18%;
   }
 }
