@@ -19,7 +19,7 @@
                 {% for post in post_list %}
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <div class="card-body">
+                            <div class="card-body card-body-news">
                                 <div class="card-img">
                                     <a href="{% url 'news_details' post.slug %}">
                                     <p class="author">Posted By: {{ post.author.first_name }} {{ post.author.last_name}} / {{ post.author }}</p>
