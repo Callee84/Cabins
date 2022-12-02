@@ -7,7 +7,9 @@
 <div class="container">
 
     <br>
-    <!------------------ add post form -------------->
+
+    <!--add post form -->
+
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
                 <div class="guestbook-img-text">
@@ -23,7 +25,9 @@
                 </form>
         </div>
     {% else %}
-    <!------------------ message when not auth -------------->
+    
+    <!-- message when not auth -->
+    
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
             <br>
@@ -34,9 +38,10 @@
     {% endif %}
 </div>
 
-<!------------------ script to hide selection for author -------------->
-<!------------------ this is set pre set to auth user -------------->
-<!------------------ and hidden by this sript -------------->
+<!-- script to hide selection for author -->
+<!-- this is set pre set to auth user -->
+<!-- and hidden by this sript -->
+
 <script>
     let name = '{{ user.id }}';
     document.getElementById('user_id').value = name;

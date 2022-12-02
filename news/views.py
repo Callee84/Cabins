@@ -16,7 +16,6 @@ class showNews(ListView):
     ordering = ['-created']
 
 
-
 class DetailNews(DetailView):
     model = Post
     template_name = 'news_detail.html'

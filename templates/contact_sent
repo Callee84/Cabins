@@ -2,7 +2,9 @@
     {% load crispy_forms_tags %}
 
     {% block main %}
-<!------------------ message when contact form sent -------------->
+
+<!--message when contact form sent -->
+
 <div class="contact-img">
     <div class="row">
     </div>

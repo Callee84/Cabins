@@ -17,7 +17,9 @@
 </head>
 <body>
 <header>
-    <!------------------ navbar -------------->
+    
+  <!-- navbar -->
+
       <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="{% url 'home' %}">Home</a>
           <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" 
@@ -32,7 +34,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" 
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <!------------------ dropdown navbar -------------->
+                
+                <!-- dropdown navbar -->
+
                   Destinations
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,7 +54,9 @@
                 <a class="nav-link" href="{% url 'contact' %}">Contact</a>
               </li>
             </ul>
-            <!------------------ navbar account -------------->
+            
+            <!--navbar account -->
+
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
               <li class="nav-item ml-auto">
@@ -73,7 +79,9 @@
     {% block main %}
 
     {% endblock main %}
-<!------------------ footer -------------->
+
+ <!--footer -->
+
     <footer>
       <div class="container">
       <div class="row foot">

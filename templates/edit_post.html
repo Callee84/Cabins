@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block main %}
+
+
 <div class="news-img"></div>
-<!------------------ edit post if auth -------------->
+
+<!-- edit post if auth -->
+
 {% if user.is_authenticated %}
 {% if user.id == 1 %}
     <div class="container d-flex justify-content-center">
@@ -16,7 +20,9 @@
             </form>
         </div>
     </div>
-    <!------------------ message if not auth -------------->
+
+    <!-- message if not auth -->
+    
     {% else %}
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
