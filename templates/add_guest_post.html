@@ -5,19 +5,21 @@
 <div class="guestbook-img"></div>
     {% if user.is_authenticated %}
 <div class="container">
-    <div class="guestbook-img-text">
-        <h1>Add your post</h1>
-        <h5>Here you can leave comments about the cabins or something else 
-            that you wish to convey to other guests.</h5>
-        </div>
+
     <br>
     <!------------------ add post form -------------->
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
+                <div class="guestbook-img-text">
+                    <h1>Add your post</h1>
+                    <p>Here you can leave comments about the cabins or something else 
+                        that you wish to convey to other guests.</p>
+                    </div>
                 <form method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <button class="btn btn-secondary">Post</button>
+                    <br>
+                    <button class="btn btn-success">Post</button>
                 </form>
         </div>
     {% else %}

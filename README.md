@@ -145,7 +145,7 @@ The news page is desiged like a blog. Here the admin can post news article for t
 
 ![News](./cabin/assets/img/news.jpg)
 
-It requires authentication to be able to post a news article. If user is't authenicated htey recive an message if they would somehow access the post page. If authenticated the the user will get the option to add post.
+It requires authentication to be able to post a news article. If user is't authenicated then they recive an message if they would somehow access the post page. If authenticated the the user will get the option to add post.
 
 ![Not authenticated](./cabin/assets/img/news_not_auth.jpg)
 
@@ -155,10 +155,36 @@ When clicking on a news article the user will be taken to a new page where the f
 
 ![News details](./cabin/assets/img/details.jpg) ![Authenticated User](./cabin/assets/img/edit.jpg)
 
-Editing the news takes the user to 
+Editing the news takes the user to a new page to a form that is prepopulated with the aritcle the user want to edit. 
+Clicking the delete button will trigger a modal wich will appear with information about the article. Deleting a post from the review page will trigger the same modal.
+
+![Delete News](./cabin/assets/img/delete.jpg)
+
+**Reviews**
+
+The review page comes from the guestbook app. The name was changes in late development after input from users. 
+The review page works very similar to the news page. Authenticated users can add and edit their own posts and also delete. When adding a post the guset will also choose a category in which the post relate to.
+
+![Add Review](./cabin/assets/img/add_review.jpg)
+
+If the user is not authenticated the option off `add post` is not available. If they where to access the post page a message will be displayed instead of the post add form.
+
+![Reviews](./cabin/assets/img/guest_not_auth.jpg)
+
+**Contact**
+
+The contact paga contains a contact from. Here the user can send their request / question and will choose subject from the dropdown list.
+
+![Contact](./cabin/assets/img/contact.jpg)
+
+---
+
+## Testing
 
 
 
+
+---
 
 ## **Technologies Used**
 
