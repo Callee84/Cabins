@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
 {% block main %}
+<div class="news-img"></div>
+
+{% if user.is_authenticated %}
+{% if user.id == 1 %}
     <div class="container d-flex justify-content-center">
         <div class="col-sm-6">
             <h1>Edit Post</h1>
@@ -13,5 +16,27 @@
             </form>
         </div>
     </div>
+    {% else %}
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-4 col-md-6">
+            <br>
+            <h2>You are not allowed in here... and I think you know why...</h2>
+            <p>Only administrators can post news articles here.</p>
+            <br>
+            <a href="{% url 'news' %}" type="button" class="btn btn-primary">Back to News</a>
+        </div>
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-4 col-md-6">
+            <br>
+            <h2>You are not allowed in here... and I think you know why...</h2>
+            <p>Only administrators can edit news articles here.</p>
+            <a href="{% url 'news' %}" type="button" class="btn btn-primary">Back to News</a>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
 

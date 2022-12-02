@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
     
     {% block main %}
-    <!-- content for the clicked news item -->
+  
+<div class="news-img"></div>
+  <!-- content for the clicked news item -->
 <div class="container d-flex justify-content-center">
   <div class="col-6 news-detail">
     <h1>{{ post.title }}</h1>
       <p>Posted By: {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created }}</p>
       <p>{{ post.content }}</p>
         <br>
-          <a href="{% url 'news' %}"><button class="btn btn-secondary">Back</button></a>
+          <a href="{% url 'news' %}"><button class="btn btn-primary">Back</button></a>
     {% if user.is_authenticated %}
     {% if user.id == 1 %}
           <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-success">Edit</button></a>
