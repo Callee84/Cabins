@@ -15,9 +15,9 @@
 
     // calculate day
     const showDay = Math.floor(gap / day);
-    const showHour = Math.floor ((gap % day) / hour)
-    const showMin = Math.floor ((gap % hour) / minute)
-    const showSec = Math.floor ((gap % minute) / second)
+    const showHour = Math.floor ((gap % day) / hour);
+    const showMin = Math.floor ((gap % hour) / minute);
+    const showSec = Math.floor ((gap % minute) / second);
 
     document.querySelector(".day").innerText = showDay;
     document.querySelector(".hour").innerText = showHour;
@@ -25,4 +25,4 @@
     document.querySelector(".secs").innerText = showSec;
 };
 
-setInterval(countdown, 1000)
+setInterval(countdown, 1000);

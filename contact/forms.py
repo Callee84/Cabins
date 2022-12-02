@@ -1,9 +1,9 @@
 from django import forms
 
 SUBJECT_CHOICES = (
-    (1, 'Inquiry Sälen'),
-    (2, 'Inquiry Öland'),
-    (3, 'Question'),
+    ('Sälen', 'Inquiry Sälen'),
+    ('Öland', 'Inquiry Öland'),
+    ('Question', 'Question'),
 )
 
 
