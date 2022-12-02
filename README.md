@@ -93,6 +93,7 @@ In the cabin_reservation app is the models for Guest, Cabin and Booking. This pr
 
 ### **Features**
 
+
 **Navigation Bar**
 The navbar is implemented on every page and is fully responsive across all resolutions.
 Users can navigate across the site freely with links not only on the navbar but also thouhout the diffent pages.
@@ -109,8 +110,9 @@ For the tablet and mobile devices I've used a collapsable navbar with a small an
 
 **Footer**
 
-Just like the navigation bar, the footer is also implemented on every page containing adresses to both cabins and a Google Map showing their locations. Under the adresses fo the cabins I've provided links to their respective pages. 
+Just like the navigation bar, the footer is also implemented on every page containing adresses to both cabins and a Google Map showing their locations. Under the adresses fo the cabins I've provided links to their respective pages.  The color is set to a dark grey to stand out.
 
+![Footer](./cabin/assets/img/footer.jpg)
 
 **Home Page**
 
@@ -119,7 +121,35 @@ The home page greets you with a nice snowy mountain image featuring a JavaScript
 ![Home page](./cabin/assets/img/home_page.jpg)
 
 
-![Cabin Sälen]
+**Destination**
+
+Whe clicking the the dropdown menu on the navbar you can choose to visit the cabin you want to see.
+
+![Cabin Sälen](./cabin/assets/img/salen.jpg)
+
+The two cabins is displayed on seperate pages wwith a similar layout. First a header image followd by some information insided a bootstrap card. 
+
+![Cabin Öland](./cabin/assets/img/oland.jpg)
+
+Clicking the "More Information" button triggers a dropdown with some additional information about the cabins.
+
+![More information](./cabin/assets/img/more_info_down.jpg)
+
+Scolling down there's a image carousel containig imagaes of the cabins. This carousel change images automatically but there's also navigation buttons so that you can choose yourself. Right below the carousel is a inquiry button which when clicked takes hte user to the contact page. 
+
+![Carousel](./cabin/assets/img/carousel.jpg)
+
+**News**
+
+The news page is desiged like a blog. Here the admin can post news article for the user. 
+
+![News](./cabin/assets/img/news.jpg)
+
+It requires authentication to be able to post a news article. If user is't authenicated htey recive an message if they would somehow access the post page.
+
+![Not authenticated](./cabin/assets/img/news_not_auth.jpg)
+
+
 
 ## **Technologies Used**
 

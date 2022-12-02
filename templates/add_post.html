@@ -8,14 +8,13 @@
 {% if user.is_authenticated %}
 {% if user.id == 1 %}
 <div class="container">
-    <div class="guestbook-img-text">
-        <h1>Add your post</h1>
-        <h5>Here you can add a news article</h5>
-    </div>
-    <h1>Add News</h1>
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
-        <!-- Contact form -->
+                <div class="guestbook-img-text">
+                    <h1>Add News</h1>
+                    <p>Here you can add a news article</p>
+                </div>
+                <!-- Add news form -->
                 <form method="POST" class="contact-form full-form mb-5">
                     {{ form | crispy }}
                     {% csrf_token %}
