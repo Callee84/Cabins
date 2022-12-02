@@ -11,6 +11,7 @@
             that you wish to convey to other guests.</h5>
         </div>
     <br>
+    <!------------------ add post form -------------->
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
                 <form method="POST">
@@ -20,6 +21,7 @@
                 </form>
         </div>
     {% else %}
+    <!------------------ message when not auth -------------->
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
             <br>
@@ -30,7 +32,9 @@
     {% endif %}
 </div>
 
-
+<!------------------ script to hide selection for author -------------->
+<!------------------ this is set pre set to auth user -------------->
+<!------------------ and hidden by this sript -------------->
 <script>
     let name = '{{ user.id }}';
     document.getElementById('user_id').value = name;
