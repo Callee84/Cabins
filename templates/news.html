@@ -1,21 +1,96 @@
 {% extends 'base.html' %}
     
 {% block main %}
-<div class="news-img">
-    <div class="guestbook-img-text">
-        <h2>Want to know what's up? We try to keep you updated!</h2>
+<div class="news-img"></div>
+<br>
+<div class="container-fluid">
+    <div class="row add-post">
+        {% if user.is_authenticated %}
+        {% if user.id == 1 %}
+            <a href="{% url 'add_post' %}"><button class="btn btn-primary">Add Post</button></a>
+
+        {% endif %}
+    {% endif %}
     </div>
+    <div class="guestbook-img-text">
+        <br>
+        <h2>Want to know what's up? We'll keep you updated!</h2>
+        <p>Click on the card to get the full news article.</p>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in post_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body card-body-news">
+                                <div class="card-img">
+                                    <a href="{% url 'news_details' post.slug %}">
+                                    <p class="author">Posted By: {{ post.author.first_name }} {{ post.author.last_name}} / {{ post.author }}</p>
+                                </div>
+                            
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6">Created on: {{ post.created }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 </div>
-<div class="container">
+</div>
+{% endblock %}
+
+<!-- <div class="container">
+    <div class="row">
             <br>
     {% if user.is_authenticated %}
         {% if user.id == 1 %}
             <a href="{% url 'add_post' %}"><button class="btn btn-primary">Add Post</button></a>
         {% endif %}
     {% endif %}
-    
-        <div class="row">
+    <div class="guestbook-img-text">
+        <h2>Want to know what's up? We'll keep you updated!</h2>
+        <p>Click on the card to get the full news article.</p>
+    </div>
+
+        
             <div class="col-12 mt-3 left">
+                <div class="row">
                 {% for post in post_list %}
                     <div class="col-md-4">
                         <div class="card mb-4">
@@ -30,13 +105,28 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
                 {% if forloop.counter|divisibleby:3 %}
             <div class="row">
                     {% endif %}
                 {% endfor %}
-            </div> 
+            </div>
+    </div> 
+</div>
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 </div>
 
-{% endblock %}

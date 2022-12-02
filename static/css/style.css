@@ -2,6 +2,7 @@ body {
     background-color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    color: #3e3e3e;
 }
 
 a {
@@ -10,8 +11,8 @@ a {
 }
 
 /*-----------------------------------------| navbar |-----------------------------*/
-.navbar-nav {
-  color: rgb(100, 184, 194);
+.navbar {
+  color: #080808;
 }
 
 .navbar-toggler {
@@ -382,7 +383,7 @@ a {
 /*------------------------------ | news | --------------------------------*/
 
 .news-img {
-  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669921321/cabin_project/cabinn_salen_fqny46.jpg) center center;
+  background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669743214/cabin_project/news_aeopfd.jpg) center center;
   width: 100%;
   height: 20rem;
   text-align: center;
@@ -395,7 +396,7 @@ a {
 }
 
 .card-body-news {
-  background-color: #94aeca;
+  background-color: #e8dfc8;
 }
 
 /*------------------------------ | guestbook | ----------------------------*/

@@ -12,7 +12,7 @@ class showNews(ListView):
     model = Post
     queryset = Post.objects.order_by('created')
     template_name = 'news.html'
-    paginate_by = 9
+    paginate_by = 6
     ordering = ['-created']
 
 
