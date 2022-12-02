@@ -385,7 +385,7 @@ a {
 .news-img {
   background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669743214/cabin_project/news_aeopfd.jpg) center center;
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   text-align: center;
   white-space: pre;
   color: black;
@@ -396,7 +396,7 @@ a {
 }
 
 .card-body-news {
-  background-color: #e8dfc8;
+  background-color: #c8d9e8;
 }
 
 /*------------------------------ | guestbook | ----------------------------*/
@@ -404,10 +404,22 @@ a {
 .guestbook-img {
   background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669739763/cabin_project/guestbook_a7grzx.jpg);
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   text-align: center;
   white-space: pre;
   color: black;
+}
+
+.guestbook-header {
+  margin: 2rem;
+}
+
+.card-guest {
+  background-color: #c8d9e8;
+}
+
+.sign-reg {
+  color: blue ;
 }
 
 /*------------------------------ | contact | ----------------------------*/
@@ -526,8 +538,21 @@ div#map {
   .contact-img {
     background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669908889/cabin_project/cintact_responsive_ubixol.jpg) no-repeat center center;
     width: 100%;
-    height: 30rem;
+    height: 25rem;
   }
+
+  .news-img {
+    background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669973025/cabin_project/news_tablet_arp7jy.jpg) center center;
+    width: 100%;
+    height: 25rem;
+  }
+
+  .guestbook-img {
+    background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669972925/cabin_project/guestbook_ttablet_lvg3po.jpg);
+    width: 100%;
+    height: 25rem;
+  }
+
 }
 
 /*--------------- | screens from 770px and down | ---------------------*/
@@ -621,6 +646,18 @@ div#map {
     background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669909007/cabin_project/cintact_responsive_small_yxu8xb.jpg) no-repeat center center;
     width: 100%;
     height: 15rem;
+  }
+
+  .news-img {
+    background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669973056/cabin_project/news_mobile_f3yetj.jpg) center center;
+    width: 100%;
+    height: 25rem;
+  }
+
+  .guestbook-img {
+    background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669972954/cabin_project/guestbook_mobile_ha4zdd.jpg);
+    width: 100%;
+    height: 25rem;
   }
   
   footer {

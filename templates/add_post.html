@@ -3,14 +3,15 @@
 
 {% block main %}
 <div class="news-img">
-    <div class="guestbook-img-text">
-        <h1>Add your post</h1>
-        <h5>Here you can add a news article</h5>
-        </div>
-    </div>
+   
+</div>
 {% if user.is_authenticated %}
 {% if user.id == 1 %}
 <div class="container">
+    <div class="guestbook-img-text">
+        <h1>Add your post</h1>
+        <h5>Here you can add a news article</h5>
+    </div>
     <h1>Add News</h1>
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
@@ -27,14 +28,18 @@
         {% else %}
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
+            <br>
             <h2>You are not allowed in here... and I think you know why...</h2>
+            <p>Only administrators can post news articles here.</p>
         </div>
     </div>
     {% endif %}
     {% else %}
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
+            <br>
             <h2>You are not allowed in here... and I think you know why...</h2>
+            <p>Only administrators can post news articles here.</p>
         </div>
     </div>
 </div>

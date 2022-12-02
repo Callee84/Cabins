@@ -2,15 +2,14 @@
 {% load crispy_forms_tags %}
 
 {% block main %}
-<div class="guestbook-img">
+<div class="guestbook-img"></div>
+    {% if user.is_authenticated %}
+<div class="container">
     <div class="guestbook-img-text">
         <h1>Add your post</h1>
         <h5>Here you can leave comments about the cabins or something else 
             that you wish to convey to other guests.</h5>
         </div>
-    </div>
-    {% if user.is_authenticated %}
-<div class="container">
     <br>
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
@@ -23,7 +22,9 @@
     {% else %}
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
+            <br>
             <h2>You are not allowed in here... and I think you know why...</h2>
+            <p>Please <a href="{% url 'account_login' %}" class="sign-reg">sign in</a> or <a href="{% url 'account_signup' %}" class="sign-reg">register</a> to access this site.</p>
         </div>
     
     {% endif %}
