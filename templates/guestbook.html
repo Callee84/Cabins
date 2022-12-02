@@ -13,9 +13,10 @@
       <h1>What's on your mind?</h1>
         <p>Here you can leave a reveiw about the cabins or something else 
             that you wish to convey to other guests.</p>
-    </div>
+   
   {% if user.is_authenticated %}
-    <a href="{% url 'add_guest_post' %}"><button class="btn btn-success">Add Post</button></a>
+    <a href="{% url 'add_guest_post' %}" type="button"  class="btn btn-primary">Add Post</a>
+  </div>
   {% endif %}
   <!------------------ new page over 6 cards -------------->
   {% if is_paginated %}
