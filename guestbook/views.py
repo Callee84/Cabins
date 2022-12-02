@@ -13,7 +13,7 @@ class PostGuestView(ListView):
     model = PostGuest
     queryset = PostGuest.objects.order_by('created')
     template_name = 'guestbook.html'
-    paginate_by = 10
+    paginate_by = 9
     ordering = ['-created']
 
 
