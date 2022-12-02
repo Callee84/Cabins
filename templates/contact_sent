@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+    {% load crispy_forms_tags %}
+
+    {% block main %}
+        <!-- content for cabin_salen.html -->
+<div class="contact-img">
+    <div class="row">
+    </div>
+</div>
+    <div class="container question">
+        <div class="row">
+            <h1>Thank you for contacting us</h1>
+            <br>
+                <br>
+                We'll get back to you as soon as possible, usually within 24 hours.    
+                </p>
+        </div>
+        </div>
+    </div>
+</div>   
+        {% endif %}
+    {% endblock main %}
+    

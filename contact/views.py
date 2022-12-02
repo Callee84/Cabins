@@ -7,6 +7,10 @@ from django.views import View
 from .forms import ContactForm
 
 
+def contact_sent(request):
+    return render(request, 'contact_sent.html')
+
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -31,7 +35,7 @@ def contact(request):
                       html_message=html)
             print('Email was sent')
 
-            return redirect('contact')
+            return redirect('sent')
 
     else:
         form = ContactForm()
