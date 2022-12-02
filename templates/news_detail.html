@@ -25,17 +25,18 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-          
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete news with title: <strong>{{ post.title }}</strong></h1>
+          <br>
         </div>
         <div class="modal-body">
-          <h2>Delete?</h2>
-            <p>
-          Are you sure you want to delete this post? It's pretty nice to read...
-            </p>
+          <p>
+            Are you sure you want to delete this news article? It's pretty nice to read...
+            <br>
+            This action will permanently delete this news article.
+          </p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Back</button>
           <form action="{% url 'deleted_post' post.slug %}" method="post">
             {% csrf_token %}
           <button class="btn btn-danger">Delete</button>

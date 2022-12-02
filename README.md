@@ -145,9 +145,18 @@ The news page is desiged like a blog. Here the admin can post news article for t
 
 ![News](./cabin/assets/img/news.jpg)
 
-It requires authentication to be able to post a news article. If user is't authenicated htey recive an message if they would somehow access the post page.
+It requires authentication to be able to post a news article. If user is't authenicated htey recive an message if they would somehow access the post page. If authenticated the the user will get the option to add post.
 
 ![Not authenticated](./cabin/assets/img/news_not_auth.jpg)
+
+**News Details**
+
+When clicking on a news article the user will be taken to a new page where the full article can be read. If the user is authenticated then the options of `edit` and `delete` will also appear.
+
+![News details](./cabin/assets/img/details.jpg) ![Authenticated User](./cabin/assets/img/edit.jpg)
+
+Editing the news takes the user to 
+
 
 
 
