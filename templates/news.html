@@ -43,14 +43,13 @@
                     <div class="card mb-4">
                         <div class="card-body card-body-news">
                                 <div class="card-img">
-                                    <a href="{% url 'news_details' post.slug %}">
                                     <p class="author">Posted By: {{ post.author.first_name }} {{ post.author.last_name}} / {{ post.author }}</p>
                                 </div>
-                            
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
+                        
+                                <a href="{% url 'news_details' post.slug %}">
+                                <h2 class="card-title">{{ post.title }}</h2></a>
+                                <a href="{% url 'news_details' post.slug %}"><p class="card-text">{{ post.excerpt }}</p></a>
+                            <hr>
                             <p class="card-text text-muted h6">Created on: {{ post.created }}</p>
                         </div>
                     </div>
@@ -80,7 +79,6 @@
         </ul>
     </nav>
     {% endif %}
-</div>
-</div>
+
 {% endblock %}
 
