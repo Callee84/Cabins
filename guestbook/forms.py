@@ -9,6 +9,7 @@ cabin_choice = []
 for cabin in choices:
     cabin_choice.append(cabin)
 
+
 class AddGuestPost(forms.ModelForm):
     class Meta:
         model = PostGuest

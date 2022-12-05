@@ -8,7 +8,8 @@ from datetime import datetime, date
 class Post(models.Model):
     title = models.CharField(max_length=225, unique=True)
     slug = models.SlugField(max_length=225, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='news_posts')
+    author = models.ForeignKey(
+            User, on_delete=models.CASCADE, related_name='news_posts')
     content = models.TextField()
     created = models.DateField(auto_now_add=True)
     excerpt = models.TextField(blank=True)

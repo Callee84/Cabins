@@ -45,9 +45,9 @@ def new_booking(self, request, User=User, *args, **kwargs):
             guest_departure_date, '%d/%m/%Y')
 
         booking = booking_form.save(commit=False)
-            # Pass formatted date & customer in to model
+        # Pass formatted date & customer in to model
         booking.arrival_date = conv_guest_arrival
         booking.departure_date = conv_guest_departure
         reservation.customer = customer
-            # Save reservation
+        # Save reservation
         booking_form.save()

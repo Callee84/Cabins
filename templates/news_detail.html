@@ -10,7 +10,7 @@
       <p>Posted By: {{ post.author.first_name }} {{ post.author.last_name }} on {{ post.created }}</p>
       <p>{{ post.content }}</p>
         <br>
-          <a href="{% url 'news' %}" type="button" class="btn btn-primary">Back</a>
+          <a href="{% url 'news' %}" class="btn btn-primary">Back</a>
     {% if user.is_authenticated %}
     {% if user.id == 1 %}
           <a href="{% url 'edit_post' post.slug %}" type="button" class="btn btn-success">Edit</a>
@@ -40,6 +40,7 @@
           <form action="{% url 'deleted_post' post.slug %}" method="post">
             {% csrf_token %}
           <button class="btn btn-danger">Delete</button>
+          </form>
         </div>
       </div>
     </div>

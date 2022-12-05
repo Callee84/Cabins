@@ -8,7 +8,7 @@
 <!-- edit post if auth -->
 
 {% if user.is_authenticated %}
-{% if user.id == 1 %}
+    {% if user.id == 1 %}
     <div class="container d-flex justify-content-center">
         <div class="col-sm-6">
             <h1>Edit Post</h1>
@@ -17,10 +17,11 @@
             {% csrf_token %}
             {{ form | crispy }}
                 <button class="btn btn-success">Edit</button>
+                <a href="{% url 'news' %}" class="btn btn-primary">Back to News</a>
             </form>
         </div>
     </div>
-
+    {% endif %}
     <!-- message if not auth -->
     
     {% else %}
@@ -28,22 +29,12 @@
         <div class="col-sm-4 col-md-6">
             <br>
             <h2>You are not allowed in here... and I think you know why...</h2>
-            <p>Only administrators can post news articles here.</p>
+            <p>Only administrators is allowed to edit news articles here.</p>
+            <a href="{% url 'news' %}" class="btn btn-primary">Back to News</a>
+            {% endif %}
             <br>
-            <a href="{% url 'news' %}" type="button" class="btn btn-primary">Back to News</a>
         </div>
     </div>
-    {% endif %}
-    {% else %}
-    <div class="row d-flex justify-content-center">
-        <div class="col-sm-4 col-md-6">
-            <br>
-            <h2>You are not allowed in here... and I think you know why...</h2>
-            <p>Only administrators can edit news articles here.</p>
-            <a href="{% url 'news' %}" type="button" class="btn btn-primary">Back to News</a>
-        </div>
-    </div>
-</div>
-{% endif %}
+
 {% endblock %}
 

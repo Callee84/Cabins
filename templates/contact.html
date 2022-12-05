@@ -32,12 +32,9 @@
 
         <!-- contact form -->
         
-                <div class="container-fluid">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm-8"> 
-                        </div>
-                    </div> 
-                    <div class="row d-flex justify-content-center">
+                <div class="container d-flex justify-content-center">
+
+                    <div class="col-sm-6">
                     <form action="{% url 'contact' %}" method="post"
                         class="contact-form">
                             {% csrf_token %}

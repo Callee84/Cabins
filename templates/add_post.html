@@ -6,45 +6,48 @@
 {% if user.is_authenticated %}
 {% if user.id == 1 %}
 <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-sm-4 col-md-6">
-                <div class="guestbook-img-text">
-                    <h1>Add News</h1>
-                    <p>Here you can add a news article</p>
-                </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-4 col-md-6">
+            <div class="guestbook-img-text">
+                <h1>Add News</h1>
+                <p>Here you can add a news article</p>
+            </div>
 
                 <!-- Add news form -->
                 
-                <form method="POST" class="contact-form full-form mb-5">
-                    {{ form | crispy }}
-                    {% csrf_token %}
-                        <br>
-                        <button type="submit" class="btn btn-primary">Add Post</button>
+            <form method="POST" class="contact-form full-form mb-5">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <br>
+                <button type="submit" class="btn btn-primary">Add Post</button>
 
-                </form>
-            </div>
-        </div>
-        {% else %}
-
-        <!-- message when not auth -->
-
-    <div class="row d-flex justify-content-center">
-        <div class="col-sm-4 col-md-6">
-            <br>
-            <h2>You are not allowed in here... and I think you know why...</h2>
-            <p>Only administrators can post news articles here.</p>
-        </div>
-    </div>
-    {% endif %}
-    {% else %}
-    <div class="row d-flex justify-content-center">
-        <div class="col-sm-4 col-md-6">
-            <br>
-            <h2>You are not allowed in here... and I think you know why...</h2>
-            <p>Only administrators can post news articles here.</p>
+            </form>
         </div>
     </div>
 </div>
+        {% else %}
+
+        <!-- message when not auth -->
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-4 col-md-6">
+                <br>
+                <h2>You are not allowed in here... and I think you know why...</h2>
+                <p>Only administrators can post news articles here.</p>
+            </div>
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-4 col-md-6">
+            <br>
+                <h2>You are not allowed in here... and I think you know why...</h2>
+                <p>Only administrators can post news articles here.</p>
+            </div>
+        
+        </div>
+
 {% endif %}
 
 {% endblock %}

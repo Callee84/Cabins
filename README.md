@@ -173,7 +173,7 @@ If the user is not authenticated the option off `add post` is not available. If 
 
 **Contact**
 
-The contact paga contains a contact from. Here the user can send their request / question and will choose subject from the dropdown list.
+The contact page contains a contact from. Here the user can send their request / question and will choose subject from the dropdown list.
 
 ![Contact](./cabin/assets/img/contact.jpg)
 
@@ -181,7 +181,8 @@ The contact paga contains a contact from. Here the user can send their request /
 
 ## Testing
 
-
+Link to the Testing Document.
+- [TESTING.md](/TESTING.md)
 
 
 ---
@@ -291,7 +292,7 @@ In the Deploy tab:
 - The split image i found as a code along on youtube with credits to Code Instinct.
 - For the news / post funcitions I've took inspiration from Code Institute's Walkthough project "I Think Therefore I Blog" and John Elder from Codemy.com.
 
-- Big thanks to Ed in Tutor support who helped me massivly when i had to drop the database and start over.
+- Big thanks to Ed in Tutor support who helped me massivly when I had to drop the database and start over and also for help in solving some issues with authenticaitons.
 
 - As always, a massive thanks to my mentor Harry Dhillon for pointing me in the right direction when I'm a bit lost.
 
