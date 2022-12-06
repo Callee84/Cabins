@@ -28,7 +28,7 @@ def contact(request):
                                         'email': email,
                                         'subject': subject,
                                         'question': question
-                                    })
+                                    })    
 
             send_mail(subject, question,
                       email, ['carl.g.holm@gmail.com'],

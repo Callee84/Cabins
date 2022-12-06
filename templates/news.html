@@ -50,7 +50,7 @@
                                 <h2 class="card-title">{{ post.title }}</h2></a>
                                 <a href="{% url 'news_details' post.slug %}"><p class="card-text">{{ post.excerpt }}</p></a>
                             <hr>
-                            <p class="card-text text-muted h6">Created on: {{ post.created }}</p>
+                            <p class="card-text created">Created on: {{ post.created }}</p>
                         </div>
                     </div>
                 </div>

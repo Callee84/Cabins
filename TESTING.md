@@ -1,3 +1,97 @@
+[Back to README](https://github.com/Callee84/Cabins#readme)
+
+---
+
+I've done manual testing of this site and I've also let friends and family test it on various divices and web browsers.
+
+---
+
+### **Manual Testing**
+
+**Site**
+- The site is fully responsive on large / medium and samll screen sizes.
+
+**Navbar**
+- Fully responsive on large / medium and small screen sizes.
+    - Collapsable from 990 px width.
+- All links are correctly redirecting to the correct pages.
+
+**Footer**
+- Fully responsive on large / medium and small screen sizes.
+
+**Home Page**
+- All links tested and redirects to the correct pages.
+
+**Cabin Sälen**
+- All links tested and redirects to the correct pages.
+- Dropdown button works correctly and activates the dropdown.
+
+**Cabin Öland**
+- All links tested and redirects to the correct pages.
+- Dropdown button works correctly and activates the dropdown.
+
+**News**
+- All links tested and redirects to the correct pages / news.
+- Authenication validation works.
+    - Only Admin (user.id 1) can add / edit / delete posts.
+    - Entering add / edit page shows a error message and show redirect button back to news page.
+
+![Not authenticated admin user](./cabin/assets/img/not_auth_news.jpg)
+
+**Reviews**
+- All links tested and redirects to the correct pages / news.
+- Authenication validation works.
+    - Only authenticaded users can add / edit / delete posts.
+    - Only the author of the post can edit / delete their own posts.
+    - Entering add / edit page when not authenticaded shows a error message and show redirect button back to reviews page
+  
+**Contact**
+- All links tested and redirects to the correct pages / news.
+- The contact form works correctly. When contact form i submitted it gets sent tom my email.
+
+![Recieved contact form](./cabin/assets/img/contact_mail.jpg)
+
+**Register**
+- The register page and functions works correctly. 
+- After signup the user is redirected to the Home page as loged in user
+
+**Login**
+- Login works correctly.
+- After login the user is redirected to the Home Page
+
+**Signout**
+- Sign out works correctly and redirects the user to the Home page.
+
+---
+
+### **Chrome Dev Tools**
+I used Chrome Dev Tools throughout hte development of the website to test responsiveness and layout.
+Responivness was mainly tested for these devices:
+- Iphone SE
+- Iphone 12 Pro
+- Ipad Air
+- Ipad Pro
+- Galaxy S9
+
+---
+
+### **Browser Testing**
+
+During development, the testing was mainly done solely using Google Chrome.
+
+In production the site has been tested on the following browsers,
+- Google Chrome
+- Safari
+- Mozilla Firefox
+- Microsoft Edge
+
+
+
+
+---
+
+### **Code Vaildation**
+
 All of my code has been validated using an online validator specific to the language. 
 
 - [W3C Markup Validation Service](https://validator.w3.org/) 
@@ -24,3 +118,24 @@ All of my code has been validated using an online validator specific to the lang
     * Passes with warnigs of: 
 
 ![Errors in JSHint](./cabin/assets/img/jshint.jpg)
+
+
+- [Wave](https://wave.webaim.org/)
+
+Due to prior project got some marks on accessibility due to poor color contrast I've aslo conducted an online test on the accessability. All contras errors where fixed except for 2 on the Home page.
+These errors are in reference to the split image which has white background-color in the base but is never shown to the user. The text, which appears when the image splits are in fact on a black surface, with white text. So this error where left untouched.
+
+---
+
+### **Bugs and Fixes**
+
+- I had some issues with the authentications when implementing the guestbook / review. Due to having the delete modal on the /guestbook, that caused ducplication error in the validation. In effort to fix this I ran into some issues with the error "NoReverseMatch". I had some probelm with this but with the help of * from Tutor Assistance it worked out at last.
+
+- The split image was a bit of a hassle when it came to the responsive side of things. But using Chrome Dev Tools I was able to find the element and fix this with CSS.
+
+- 
+
+[Back to README](https://github.com/Callee84/Cabins#readme)
+
+
+

@@ -15,7 +15,7 @@
             that you wish to convey to other guests.</p>
    
   {% if user.is_authenticated %}
-      <a href="{% url 'add_guest_post' %}" type="button"  class="btn btn-primary">Add Post</a>
+      <a href="{% url 'add_guest_post' %}" type="button" class="btn btn-primary">Add Post</a>
     </div>
   </div>
   {% endif %}
@@ -54,40 +54,9 @@
                 <p class="card-text">Category: {{ post.category }}</p>
                   {% if user.is_authenticated %}
                   {% if user.id == post.author.id %}
-                    <a href="{% url 'edit_guest_post' post.pk %}"><button class="btn btn-success">Edit</button></a>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Delete
-                    </button>
+                    <a href="{% url 'guestbook_manage' post.pk %}" class="btn btn-success">Manage Post</a>
                   {% endif %}
                   {% endif %}
-                      <!-- modal triggers when delete button is clicked-->
-                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete news with title: <strong>{{ post.title }}</strong></h1>
-                                <br>
-                            </div>
-                            <div class="modal-body">
-                              <p>
-                              Are you sure you want to delete this news article? It's pretty nice to read...
-                              <br>
-                              This action will permanently delete this news article.
-                              </p>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
-                              <form action="{% url 'deleted_guest_post' post.pk %}" method="post">
-                                {% csrf_token %}
-                              <button class="btn btn-danger">Delete</button>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-            
-                      <!--end modal -->
-
           </div>
         </div>
       </div>
@@ -97,16 +66,17 @@
     {% if forloop.counter|divisibleby:3 %}
   </div>
       <div class="row">
-                    {% endif %}
-                    {% endfor %}
+          {% endif %}
+          {% endfor %}
       </div>    
       </div>
+   
     </div>
   </div>
 
               <!-- new page over 6 cards -->
         
-              {% if is_paginated %}
+      {% if is_paginated %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
@@ -118,6 +88,6 @@
                 {% endif %}
             </ul>
         </nav>
-        {% endif %}
-    </div>
+      {% endif %}
+</div>
 {% endblock main %}

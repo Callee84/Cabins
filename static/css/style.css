@@ -155,6 +155,7 @@ a {
 
 .salen-body-img {
   padding-left: 10rem;
+  margin-bottom: 1.5rem;
 }
 
 .card-salen-body {
@@ -164,6 +165,7 @@ a {
 
 .oland-body-img {
   padding-left: 10rem;
+  margin-bottom: 1.5rem;
 }
 .card-oland-body {
   margin-top: 2.5rem;
@@ -360,6 +362,10 @@ a {
   margin-left: 42%;
 }
 
+.carousel-caption {
+  background-color: #6f767e;
+}
+
 /*------------------------------ | cabin oland | --------------------------------*/
 
 .cabin-oland-img {
@@ -367,10 +373,6 @@ a {
   width: 100%;
   background: url(https://res.cloudinary.com/drlxdx65k/image/upload/v1669879549/cabin_project/hus_oland_zbmv3p.jpg) no-repeat center center;
 }
-
-/* .carousel-oland {
-  margin-left: none;
-} */
 
 /*------------------------------ | news | --------------------------------*/
 
@@ -389,6 +391,10 @@ a {
 
 .card-body-news {
   background-color: #c8d9e8;
+}
+
+.created {
+  color: #555657
 }
 
 /*------------------------------ | guestbook | ----------------------------*/
@@ -424,7 +430,7 @@ a {
 
 .question h1 {
   margin-top: 3rem;
-padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .thanks {
@@ -495,23 +501,48 @@ div#map {
 /*--------------- | screens from 1400px and down | ---------------------*/
 
 @media screen and (max-width: 1400px) {
-  /* .carousel {
+  .salen-body-img {
+    padding-left: 8rem;
+  }
+
+  .oland-body-img {
+    padding-left: 8rem;
+  }
+
+   /* .carousel {
     max-width: 800px;
     margin-left: 12rem;
+  } */
+} 
+
+/*--------------- | screens from 1200px and down | ---------------------*/
+
+@media screen and (max-width: 1200px) {
+  .salen-body-img {
+    padding-left: 6rem;
   }
-} */
+
+  .oland-body-img {
+    padding-left: 6rem;
+  }
+} 
 
 /*--------------- | screens from 1100px and down | ---------------------*/
 
 @media screen and (max-width: 1100px) {
+
+  .salen-body-img {
+    padding-left: 4rem;
+  }
+
+  .oland-body-img {
+    padding-left: 4rem;
+  }
+
   .carousel-salen {
     max-width: 800px;
     /* margin-left: 4.5rem; */
   }
-
-  /* .carousel-oland {
-    margin-left: 3rem;
-  } */
 
   .cabin-salen-img {
     height: 30rem;
@@ -547,16 +578,21 @@ div#map {
 
 }
 
-/*--------------- | screens from 770px and down | ---------------------*/
+/*--------------- | screens from 1000px and down | ---------------------*/
 
-@media screen and (max-width: 770px) {  
+@media screen and (max-width: 1000px) {
   .salen-body-img {
-    padding-left: 3rem;
+    padding-left: 1rem;
   }
 
   .oland-body-img {
-    padding-left: 3rem;
+    padding-left: 1rem;
   }
+} 
+
+/*--------------- | screens from 770px and down | ---------------------*/
+
+@media screen and (max-width: 770px) {  
 
   .cabin-salen-img {
     height: 30rem;
@@ -573,10 +609,6 @@ div#map {
   .card-info-cabin {
     border: none;
   }
-  
-  /* .carousel {
-    margin-left: 0;
-  } */
 
   #more-info-btn {
     margin-left: 40%;
@@ -698,5 +730,4 @@ div#map {
   #inquiry-btn {
     margin-left: 18%;
   }
-}
 }

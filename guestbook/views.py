@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from .models import PostGuest
 from .forms import AddGuestPost
 # Create your views here.
@@ -17,11 +17,15 @@ class PostGuestView(ListView):
     ordering = ['-created']
 
 
+class ManageGuestPost(DetailView):
+    model = PostGuest
+    template_name = 'manage_guest_post.html'
+
+
 class AddGuestPost(CreateView):
     model = PostGuest
     form_class = AddGuestPost
     template_name = 'add_guest_post.html'
-    # fields = '__all__'
 
 
 class EditGuestPost(UpdateView):
