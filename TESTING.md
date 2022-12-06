@@ -35,6 +35,7 @@ I've done manual testing of this site and I've also let friends and family test 
 - Authenication validation works.
     - Only Admin (user.id 1) can add / edit / delete posts.
     - Entering add / edit page shows a error message and show redirect button back to news page.
+- Full CRUD functionality
 
 ![Not authenticated admin user](./cabin/assets/img/not_auth_news.jpg)
 
@@ -44,10 +45,11 @@ I've done manual testing of this site and I've also let friends and family test 
     - Only authenticaded users can add / edit / delete posts.
     - Only the author of the post can edit / delete their own posts.
     - Entering add / edit page when not authenticaded shows a error message and show redirect button back to reviews page
+- Full CRUD functionality
   
 **Contact**
 - All links tested and redirects to the correct pages / news.
-- The contact form works correctly. When contact form i submitted it gets sent tom my email.
+- The contact form works correctly. When contact form is submitted it gets sent to my email.
 
 ![Recieved contact form](./cabin/assets/img/contact_mail.jpg)
 
@@ -85,9 +87,6 @@ In production the site has been tested on the following browsers,
 - Mozilla Firefox
 - Microsoft Edge
 
-
-
-
 ---
 
 ### **Code Vaildation**
@@ -97,9 +96,8 @@ All of my code has been validated using an online validator specific to the lang
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate all HTML code.
 
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
     - Used to validate all CSS code.
-    [Errors in W3C Jigsaw]
     * Passes with warings of parsing error connected to Bootstrap.
 
 ![Errors in WC3 Jigsaw](./cabin/assets/img/jigsaw_e.jpg)
@@ -129,11 +127,11 @@ These errors are in reference to the split image which has white background-colo
 
 ### **Bugs and Fixes**
 
-- I had some issues with the authentications when implementing the guestbook / review. Due to having the delete modal on the /guestbook, that caused ducplication error in the validation. In effort to fix this I ran into some issues with the error "NoReverseMatch". I had some probelm with this but with the help of * from Tutor Assistance it worked out at last.
+- I had some issues with the authentications when implementing the guestbook / review. Due to having the delete modal on the /guestbook, that caused ducplication error in the validation. In effort to fix this I ran into some issues with the error "NoReverseMatch". I had some probelm with this but with the help of Oisin from Tutor Assistance who pointed out to me that I should try using `object` to refer to the specified post and not `post.pk`. This fixed the problem with the "NoReverseMatch".
 
 - The split image was a bit of a hassle when it came to the responsive side of things. But using Chrome Dev Tools I was able to find the element and fix this with CSS.
 
-- 
+- Late in the project a bug with the `make inquiry` button on the cabins pages stoped working on mobile divices.
 
 [Back to README](https://github.com/Callee84/Cabins#readme)
 

@@ -77,6 +77,22 @@ The contact app provides the form for which the user can send an email to the ad
 ### *The cabin_reservation app*
 In the cabin_reservation app is the models for Guest, Cabin and Booking. This provide the admin with the ability to handle bookings on the back end. There is also a form that will (in the future) give the user the abilitiy to book a cabin directily on the website
 
+#### **Colors**
+
+![Color palette](./cabin/assets/img/color_palette.png)
+
+#FFFFFF 
+- The white background is thoughout the whole site. To get a good contrast with the text and for a bright and crips feeling.
+
+#41464C
+- This dark grey is a very nice contrast for the footer. It stands out but is also a nice soft dark grey color.
+
+#C8D9E8
+- This crisp light greyblue color is set on the cards for the news article / guest posts to give them a bit of a "pop" and stand out.
+
+#0D6EFD
+- A Bootstrap color which I put on the buttons. 
+- I've also used the Bootstrap color class of "danger" and "success" for edit/ delete and login/ register/ logout buttons on the site. 
 
 **UserProfile**
 - The user profile is connected to the User model created by Allauth on registration.
@@ -176,6 +192,11 @@ If the user is not authenticated the option off `add post` is not available. If 
 The contact page contains a contact from. Here the user can send their request / question and will choose subject from the dropdown list.
 
 ![Contact](./cabin/assets/img/contact.jpg)
+
+After sending email the user get redirected to a contact_sent page where they will recieve a messeage that confirms the email was sent.
+If user is logged in when sending email the they will get a more personal message.
+
+![Contact form sent](./cabin/assets/img/thank_you.jpg)
 
 ---
 
