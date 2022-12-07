@@ -133,6 +133,14 @@ These errors are in reference to the split image which has white background-colo
 
 - Late in the project a bug with the `make inquiry` button on the cabins pages stoped working on mobile divices.
 
+### **Non implemented User Stories**
+
+Unfortunatly I had to User Stories that where left to implement. 
+- As a Site Admin I can see all the bookings / reservations that been made on the front end so that I can overview the bookings / reservations without logging in back end.
+- As a Site User I can see available dates for the cabins so that I can make a booking / reservation for a cabin on the website.
+
+Due to some problems and lack of time I had to compromise and these where left. These I will implement in a later stage after your evaluation of this project. 
+
 [Back to README](https://github.com/Callee84/Cabins#readme)
 
 

@@ -29,6 +29,8 @@ There are ofcourse a couple of core components for this site.
 
 #### **User Stories**
 
+[User Stories](https://github.com/Callee84/Cabins/issues)
+
 ##### **Admin Goals**
 - As a Site Admin I can See all bookings / reservations that's been made so that I can see manage the cabins bookings / reservations.
 - As a Site Admin I can see all the bookings / reservations that been made on the front end so that I can overview the bookings / reservations without logging in back end
@@ -102,6 +104,7 @@ In the cabin_reservation app is the models for Guest, Cabin and Booking. This pr
 
 ## **The Skeleton Plane**
 
+The design for this website is kept clean and easy. With the execption for the split image on the Home page, the site operates on a bootstrap base of containers, rows, cards and carouels.
 
 ---
 
@@ -198,6 +201,8 @@ If user is logged in when sending email the they will get a more personal messag
 
 ![Contact form sent](./cabin/assets/img/thank_you.jpg)
 
+**
+
 ---
 
 ## Testing
@@ -228,6 +233,7 @@ Link to the Testing Document.
     - pytz==2022.6
     - requests-oauthlib==1.3.1
     - sqlparse==0.4.3
+- [Django](https://www.djangoproject.com/)
 - [ElephantSQL](https://www.elephantsql.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Google Fonts](https://fonts.google.com/)
@@ -237,6 +243,7 @@ Link to the Testing Document.
 - [Gitpod](https://www.gitpod.io/)
 - [Heroku](https://dashboard.heroku.com/apps)
 - [Cloudinary](https://cloudinary.com/)
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 
 ---
 
@@ -285,7 +292,6 @@ I followed the below steps using the Code Institute tutorial, *with the updated 
 *Heroku Settings*
 You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
 
-c
 - In the Settings tab, click on `Reveal Config Vars` and set the following variables:
     - CLOUDINARY_URL - to be set to your Cloudinary API environment variable
     - DATABASE_URL - to be set to your database *In my the URL to my ElephantSQL database*
@@ -312,6 +318,7 @@ In the Deploy tab:
 - I've used boostrap as a core for style & CSS 
 - The split image i found as a code along on youtube with credits to Code Instinct.
 - For the news / post funcitions I've took inspiration from Code Institute's Walkthough project "I Think Therefore I Blog" and John Elder from Codemy.com.
+- Images on this site was found on Pexels and was free to use. 
 
 - Big thanks to Ed in Tutor support who helped me massivly when I had to drop the database and start over and also for help in solving some issues with authenticaitons.
 

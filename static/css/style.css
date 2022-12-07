@@ -330,14 +330,8 @@ a {
   font-family: cursive;
 }
 
-
-.carousel-inner {
-  height: 35rem;
-}
-
 .carousel {
   max-width: 800px;
-  /* margin-left: 17rem; */
 }
 
 /*------------------------------ | cabin salen | --------------------------------*/
@@ -360,10 +354,6 @@ a {
 
 #inquiry-btn {
   margin-left: 42%;
-}
-
-.carousel-caption {
-  background-color: #6f767e;
 }
 
 /*------------------------------ | cabin oland | --------------------------------*/
@@ -656,10 +646,6 @@ div#map {
 
   #more-info-btn {
     margin-left: 30%;
-  }
-
-  .carousel {
-    height: 20rem;
   }
 
   #inquiry-btn {
