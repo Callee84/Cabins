@@ -36,7 +36,7 @@ I've done manual testing of this site and I've also let friends and family test 
 - Authenication validation works.
     - Only Admin (user.id 1) can add / edit / delete posts.
     - Entering add / edit page shows a error message and show redirect button back to news page.
-- Full CRUD functionality
+- Full CRUD functionality.
 
 ![Not authenticated admin user](./cabin/assets/img/not_auth_news.jpg)
 
