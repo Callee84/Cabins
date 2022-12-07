@@ -5,11 +5,9 @@ from .models import PostGuest
 from .forms import AddGuestPost
 # Create your views here.
 
-# def guestbook(request):
-#     return render(request, 'guestbook.html')
-
 
 class PostGuestView(ListView):
+    # view for guestbook (reviews on site)
     model = PostGuest
     queryset = PostGuest.objects.order_by('created')
     template_name = 'guestbook.html'
@@ -18,17 +16,20 @@ class PostGuestView(ListView):
 
 
 class ManageGuestPost(DetailView):
+    # view when managing post
     model = PostGuest
     template_name = 'manage_guest_post.html'
 
 
 class AddGuestPost(CreateView):
+    # view for adding post
     model = PostGuest
     form_class = AddGuestPost
     template_name = 'add_guest_post.html'
 
 
 class EditGuestPost(UpdateView):
+    # view for editing guestbook
     model = PostGuest
     template_name = 'edit_guest_post.html'
     fields = '__all__'
@@ -40,6 +41,7 @@ class EditGuestPost(UpdateView):
 
 
 class DeleteGuestPost(DeleteView):
+    # view for deleting post
     model = PostGuest
     success_url = reverse_lazy('guestbook')
     template_name = 'deleted_post.html'

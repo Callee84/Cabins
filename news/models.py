@@ -4,8 +4,8 @@ from django.urls import reverse
 from datetime import datetime, date
 
 
-# Create your models here.
 class Post(models.Model):
+    # model for news articles
     title = models.CharField(max_length=225, unique=True)
     slug = models.SlugField(max_length=225, unique=True)
     author = models.ForeignKey(

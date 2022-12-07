@@ -131,7 +131,7 @@ These errors are in reference to the split image which has white background-colo
 
 - The split image was a bit of a hassle when it came to the responsive side of things. But using Chrome Dev Tools I was able to find the element and fix this with CSS.
 
-- Late in the project a bug with the `make inquiry` button on the cabins pages stoped working on mobile divices.
+- Late in the project a bug with the `make inquiry` button on the cabins pages stoped working on mobile divices. This was beacuse of a height setting on the carousel above.
 
 ### **Non implemented User Stories**
 

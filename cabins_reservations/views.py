@@ -10,12 +10,14 @@ import datetime
 
 
 class CabinOland(View):
+    # view for cabin_oland
     def get(self, request, *args, **kwargs):
 
         return render(request, 'cabin_oland.html')
 
 
 class CabinSalen(View):
+    # view for cabin_salen
     def get(self, request, *args, **kwargs):
 
         return render(request, 'cabin_salen.html')
@@ -30,6 +32,7 @@ class CabinView(ListView):
 
 
 def new_booking(self, request, User=User, *args, **kwargs):
+    # view for booking a cabin (this view is not implementet front end)
     booking_form = Booking(data=request.POST)
 
     if booking_form.is_valid():

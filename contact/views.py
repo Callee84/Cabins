@@ -12,6 +12,7 @@ def contact_sent(request):
 
 
 def contact(request):
+    # contact form
     if request.method == 'POST':
         form = ContactForm(request.POST)
 
@@ -28,8 +29,9 @@ def contact(request):
                                         'email': email,
                                         'subject': subject,
                                         'question': question
-                                    })    
+                                    })
 
+            # send email
             send_mail(subject, question,
                       email, ['carl.g.holm@gmail.com'],
                       html_message=html)

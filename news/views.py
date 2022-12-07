@@ -9,6 +9,7 @@ from django.urls import reverse_lazy
 
 
 class showNews(ListView):
+    # view for news
     model = Post
     queryset = Post.objects.order_by('created')
     template_name = 'news.html'
@@ -17,11 +18,13 @@ class showNews(ListView):
 
 
 class DetailNews(DetailView):
+    # views for news details
     model = Post
     template_name = 'news_detail.html'
 
 
 class AddPost(CreateView):
+    # view for adding news
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
@@ -29,12 +32,14 @@ class AddPost(CreateView):
 
 
 class EditPost(UpdateView):
+    # view for editing news
     model = Post
     template_name = 'edit_post.html'
     fields = '__all__'
 
 
 class DeletePost(DeleteView):
+    # view for deleting news
     model = Post
     success_url = reverse_lazy('news')
     template_name = 'deleted_post.html'

@@ -7,6 +7,7 @@ from .models import cabin_choice, nr_of_guests
 
 
 class Booking(forms.Form):
+    # form for the booking (not implemented fron end)
     guest = forms.CharField(max_length=200)
     guests = forms.ChoiceField(choices=nr_of_guests)
     cabin = forms.ChoiceField(choices=cabin_choice)

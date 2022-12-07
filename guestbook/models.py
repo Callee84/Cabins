@@ -4,6 +4,7 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    # model for category
     name = models.CharField(max_length=50)
 
     def __str__(self):
@@ -14,6 +15,7 @@ class Category(models.Model):
 
 
 class PostGuest(models.Model):
+    # model for review in guestbook
     title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField(max_length=750)

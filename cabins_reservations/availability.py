@@ -3,6 +3,7 @@ from .models import Cabin, Booking
 
 
 def check_availability(cabin, arrival_date, departure_date):
+    # model to check availiblity (not implemented fron end)
     avail_list = []
     booking_list = Booking.objects.filter(cabin=cabin)
     for booking in booking_list:

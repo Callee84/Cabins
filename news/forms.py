@@ -3,6 +3,7 @@ from .models import Post
 
 
 class PostForm(forms.ModelForm):
+    # form to add news articles
     class Meta:
         model = Post
         fields = '__all__'

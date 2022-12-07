@@ -11,6 +11,7 @@ for cabin in choices:
 
 
 class AddGuestPost(forms.ModelForm):
+    # form for writing review i guestbook
     class Meta:
         model = PostGuest
         fields = ('title', 'author', 'category', 'content')
