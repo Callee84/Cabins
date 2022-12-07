@@ -17,6 +17,7 @@
                     <form method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
+                    <br>
                     <button class="btn btn-success">Edit</button>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Delete
@@ -28,7 +29,7 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete news with title: <strong>{{ post.title }}</strong></h1>
+                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete news with title: <strong>{{ object.title }}</strong></h1>
                                 <br>
                             </div>
                             <div class="modal-body">
@@ -40,7 +41,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
-                              <form action="{% url 'deleted_guest_post' %}" method="post">
+                              <form action="{% url 'deleted_guest_post' object.pk %}" method="post">
                                 {% csrf_token %}
                               <button class="btn btn-danger">Delete</button>
                               </form>
