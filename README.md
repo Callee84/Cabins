@@ -201,8 +201,6 @@ If user is logged in when sending email the they will get a more personal messag
 
 ![Contact form sent](./cabin/assets/img/thank_you.jpg)
 
-**
-
 ---
 
 ## Testing

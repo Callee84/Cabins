@@ -9,6 +9,7 @@ I've done manual testing of this site and I've also let friends and family test 
 ### **Manual Testing**
 
 **Site**
+- The site is easily navigated and intuitive for the user.
 - The site is fully responsive on large / medium and samll screen sizes.
 
 **Navbar**
@@ -105,8 +106,12 @@ All of my code has been validated using an online validator specific to the lang
 - [Pep8 CI Python Linter](https://pep8ci.herokuapp.com/)
     - Used to validate python code.
     * Pyhon code passes with no errors with exeptions for code in:
-        - Settings - rows to long
-        - Migrations - rows to long.
+        - `Settings` - line to long
+        - `Migrations` - line to long.
+        - `Guestbook` imports in views - line to long
+        - `Availibility` in cabins_reservations - line to long
+
+![Lines to long](./cabin/assets/img/line_to_long.jpg) ![Lines to long](./cabin/assets/img/lines_to_long.jpg)
     
     These errors where left untouched.
     

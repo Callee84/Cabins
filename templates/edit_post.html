@@ -21,9 +21,10 @@
             </form>
         </div>
     </div>
-    {% endif %}
+  
     <!-- message if not auth -->
     
+    {% endif %}
     {% else %}
     <div class="row d-flex justify-content-center">
         <div class="col-sm-4 col-md-6">
@@ -31,7 +32,8 @@
             <h2>You are not allowed in here... and I think you know why...</h2>
             <p>Only administrators is allowed to edit news articles here.</p>
             <a href="{% url 'news' %}" class="btn btn-primary">Back to News</a>
-            {% endif %}
+
+    {% endif %}
             <br>
         </div>
     </div>
